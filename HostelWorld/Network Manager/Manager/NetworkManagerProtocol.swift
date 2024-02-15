@@ -8,8 +8,8 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func  getCityProperties()
-    func  getProperty(id: Int)
+    func  getCityProperties() async ->  ResultApi<CityProperties, Error>
+    func  getProperty(id: Int) async -> ResultApi<SingleProperty, Error>
 }
 
 
