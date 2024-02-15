@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
+		31BE93072B7E9F51003981E2 /* B2BEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */; };
+		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
+		31BE930C2B7EA01C003981E2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE930B2B7EA01C003981E2 /* HTTPMethod.swift */; };
+		31BE930E2B7EA04F003981E2 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE930D2B7EA04F003981E2 /* HTTPTask.swift */; };
+		31BE93102B7EA07F003981E2 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE930F2B7EA07F003981E2 /* NetworkLogger.swift */; };
+		31BE93132B7EA0E9003981E2 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93122B7EA0E9003981E2 /* URLParameterEncoding.swift */; };
+		31BE93152B7EA118003981E2 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93142B7EA118003981E2 /* ParameterEncoding.swift */; };
+		31BE93172B7EA1D7003981E2 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93162B7EA1D7003981E2 /* JSONParameterEncoder.swift */; };
+		31BE93192B7EA592003981E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93182B7EA592003981E2 /* Router.swift */; };
+		31BE931D2B7EA93A003981E2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE931C2B7EA93A003981E2 /* NetworkManager.swift */; };
+		31BE931F2B7EA952003981E2 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE931E2B7EA952003981E2 /* NetworkManagerProtocol.swift */; };
 		31FE20232B7E9A8F000F167E /* HostelWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */; };
 		31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20242B7E9A8F000F167E /* ContentView.swift */; };
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
@@ -34,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B2BEndpoints.swift; sourceTree = "<group>"; };
+		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		31BE930B2B7EA01C003981E2 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		31BE930D2B7EA04F003981E2 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		31BE930F2B7EA07F003981E2 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		31BE93122B7EA0E9003981E2 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		31BE93142B7EA118003981E2 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		31BE93162B7EA1D7003981E2 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		31BE93182B7EA592003981E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		31BE931C2B7EA93A003981E2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		31BE931E2B7EA952003981E2 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		31FE201F2B7E9A8F000F167E /* HostelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldApp.swift; sourceTree = "<group>"; };
 		31FE20242B7E9A8F000F167E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +95,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31BE93052B7E9F3D003981E2 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		31BE93082B7E9FD2003981E2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93092B7E9FED003981E2 /* EndPointType.swift */,
+				31BE930B2B7EA01C003981E2 /* HTTPMethod.swift */,
+				31BE930D2B7EA04F003981E2 /* HTTPTask.swift */,
+				31BE930F2B7EA07F003981E2 /* NetworkLogger.swift */,
+				31BE93182B7EA592003981E2 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		31BE93112B7EA0C7003981E2 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93122B7EA0E9003981E2 /* URLParameterEncoding.swift */,
+				31BE93142B7EA118003981E2 /* ParameterEncoding.swift */,
+				31BE93162B7EA1D7003981E2 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		31BE931A2B7EA8C2003981E2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				31BE931C2B7EA93A003981E2 /* NetworkManager.swift */,
+				31BE931E2B7EA952003981E2 /* NetworkManagerProtocol.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		31BE931B2B7EA8D6003981E2 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				31FE204C2B7E9B43000F167E /* Constants */,
+				31BE93052B7E9F3D003981E2 /* EndPoint */,
+				31BE93082B7E9FD2003981E2 /* Service */,
+				31BE93112B7EA0C7003981E2 /* Encoding */,
+				31BE931A2B7EA8C2003981E2 /* Manager */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
 		31FE20162B7E9A8F000F167E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +169,7 @@
 		31FE20212B7E9A8F000F167E /* HostelWorld */ = {
 			isa = PBXGroup;
 			children = (
+				31BE931B2B7EA8D6003981E2 /* Network Manager */,
 				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
 				31FE20242B7E9A8F000F167E /* ContentView.swift */,
 				31FE20262B7E9A92000F167E /* Assets.xcassets */,
@@ -125,6 +201,14 @@
 				31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */,
 			);
 			path = HostelWorldUITests;
+			sourceTree = "<group>";
+		};
+		31FE204C2B7E9B43000F167E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93032B7E9CD3003981E2 /* APIConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +341,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BE93102B7EA07F003981E2 /* NetworkLogger.swift in Sources */,
+				31BE930E2B7EA04F003981E2 /* HTTPTask.swift in Sources */,
+				31BE931F2B7EA952003981E2 /* NetworkManagerProtocol.swift in Sources */,
+				31BE93152B7EA118003981E2 /* ParameterEncoding.swift in Sources */,
+				31BE931D2B7EA93A003981E2 /* NetworkManager.swift in Sources */,
 				31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */,
+				31BE93192B7EA592003981E2 /* Router.swift in Sources */,
+				31BE93172B7EA1D7003981E2 /* JSONParameterEncoder.swift in Sources */,
 				31FE20232B7E9A8F000F167E /* HostelWorldApp.swift in Sources */,
+				31BE930C2B7EA01C003981E2 /* HTTPMethod.swift in Sources */,
+				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
+				31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */,
+				31BE93132B7EA0E9003981E2 /* URLParameterEncoding.swift in Sources */,
+				31BE93072B7E9F51003981E2 /* B2BEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
