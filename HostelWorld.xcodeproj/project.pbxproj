@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
-		31BE93072B7E9F51003981E2 /* B2BEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */; };
+		31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* HWEndpoints.swift */; };
 		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
 		31BE930C2B7EA01C003981E2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE930B2B7EA01C003981E2 /* HTTPMethod.swift */; };
 		31BE930E2B7EA04F003981E2 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE930D2B7EA04F003981E2 /* HTTPTask.swift */; };
@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B2BEndpoints.swift; sourceTree = "<group>"; };
+		31BE93062B7E9F51003981E2 /* HWEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWEndpoints.swift; sourceTree = "<group>"; };
 		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		31BE930B2B7EA01C003981E2 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		31BE930D2B7EA04F003981E2 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		31BE93052B7E9F3D003981E2 /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
-				31BE93062B7E9F51003981E2 /* B2BEndpoints.swift */,
+				31BE93062B7E9F51003981E2 /* HWEndpoints.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -162,7 +162,6 @@
 		31BE931B2B7EA8D6003981E2 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
-				31BE933D2B7EBA16003981E2 /* ViewModel */,
 				31FE204C2B7E9B43000F167E /* Constants */,
 				31BE93052B7E9F3D003981E2 /* EndPoint */,
 				31BE93082B7E9FD2003981E2 /* Service */,
@@ -246,6 +245,7 @@
 				31BE93312B7EB0C3003981E2 /* Utils */,
 				31BE93202B7EAA7A003981E2 /* Models */,
 				31BE931B2B7EA8D6003981E2 /* Network Manager */,
+				31BE933D2B7EBA16003981E2 /* ViewModel */,
 				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
 				31FE20242B7E9A8F000F167E /* ContentView.swift */,
 				31FE20262B7E9A92000F167E /* Assets.xcassets */,
@@ -447,7 +447,7 @@
 				31BE932F2B7EACD2003981E2 /* OverallRating.swift in Sources */,
 				31BE933F2B7EBA31003981E2 /* PropertiesViewModel.swift in Sources */,
 				31BE93132B7EA0E9003981E2 /* URLParameterEncoding.swift in Sources */,
-				31BE93072B7E9F51003981E2 /* B2BEndpoints.swift in Sources */,
+				31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

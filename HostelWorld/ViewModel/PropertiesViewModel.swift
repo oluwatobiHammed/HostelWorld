@@ -21,7 +21,7 @@ class PropertiesViewModel: ObservableObject {
         let result = await network.getCityProperties()
         switch result {
             
-        case .failure(let error):
+        case .failure(_):
            return nil
         case .success(let propertise):
            return propertise

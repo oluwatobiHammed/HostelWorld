@@ -5,11 +5,22 @@
 //  Created by Oladipupo Oluwatobi on 15/02/2024.
 //
 
-public enum HTTPMethod : String {
-    case get     = "GET"
-    case post    = "POST"
-    case put     = "PUT"
-    case patch   = "PATCH"
-    case delete  = "DELETE"
+// Enumeration representing common HTTP methods.
+public enum HTTPMethod: String {
+    // HTTP GET method.
+    case get = "GET"
+
+    // HTTP POST method.
+    case post = "POST"
+
+    // HTTP PUT method.
+    case put = "PUT"
+
+    // HTTP PATCH method.
+    case patch = "PATCH"
+
+    // HTTP DELETE method.
+    case delete = "DELETE"
 }
+
 
