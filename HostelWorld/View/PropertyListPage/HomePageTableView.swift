@@ -15,61 +15,52 @@ struct HomePageTableView: View {
     @State private var errorMessage: String = ""
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(viewModel.properties?.properties ?? [], id: \.self) { property in
-                    NavigationLink(value: property) {
-                        PropertiesCellView(property: property)
-                            .clipShape(RoundedRectangle(cornerRadius: 25)) // Apply corner radius using clipShape
-                            .frame(height: 350)
-                            .padding(.vertical, 5)
-                            .padding(.horizontal, 9)
-                            .navigationBarTitle(property.city?.country ?? "")
+        
+        PropertyListScrollView(properties: viewModel.properties?.properties ?? [])
+            .scrollIndicators(.hidden)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: CityProperty.self) { property in
+                PropertyDetailScreen(id: property.id)
+            }
+            .alert("Retry", isPresented: $showAlert) {
+                Button(action: {
+                    withAnimation {
+                        viewModel.memoryCleanUp()
+                        loadPropertyList()
                     }
-                    .buttonStyle(PlainButtonStyle()) // Use PlainButtonStyle to remove the default navigation color
-                    .accentColor(nil) // Remove selection style
-                    
-                }
-                
-            }
-            
-        }
-        .scrollIndicators(.hidden)
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: CityProperty.self) { property in
-            PropertyDetailScreen(id: property.id)
-        }
-        .alert("Retry", isPresented: $showAlert) {
-            Button(action: {
-                withAnimation {
-                    viewModel.memoryCleanUp()
-                    loadPropertyList()
-                }
-            }) {
-               
+                }) {
                    
+                       
+                }
+            } message: {
+              Text(errorMessage)
             }
-        } message: {
-          Text(errorMessage)
-        }
-        .navigationBarItems(trailing:
-                      Button(action: {
-                          // Reload the data
+            .navigationBarItems(trailing:
+                          Button(action: {
+                              // Reload the data
+                              self.reload()
+                          }) {
+                              Image(systemName: "arrow.clockwise.circle")
+                                  .imageScale(.large)
+                          }
+                      )
+                      .pullToRefresh(isRefreshing: $isRefreshing) {
                           self.reload()
-                      }) {
-                          Image(systemName: "arrow.clockwise.circle")
-                              .imageScale(.large)
                       }
-                  )
-                  .pullToRefresh(isRefreshing: $isRefreshing) {
-                      self.reload()
-                  }
-        .padding()
-        .padding(.top, -15)
+            .padding()
+            .padding(.top, -15)
         .onLoad {
             viewModel.memoryCleanUp()
             loadPropertyList()
             
+        }
+        if (viewModel.properties?.properties.isEmpty ?? false), !showAlert {
+            let errorMessage = """
+                             Oops
+                             No available property!
+                             Be sure to check back soon.
+                             """
+            Text(errorMessage)
         }
     }
     
@@ -91,6 +82,6 @@ struct HomePageTableView: View {
     }
 }
 
-#Preview {
-    HomePageTableView()
-}
+//#Preview {
+//    HomePageTableView()
+//}

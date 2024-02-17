@@ -22,6 +22,7 @@
 		319359962B80C01200229DE5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359952B80C01200229DE5 /* AddressView.swift */; };
 		319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359972B80C0B100229DE5 /* DescriptionView.swift */; };
 		3193599A2B80C18400229DE5 /* OverallRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359992B80C18400229DE5 /* OverallRatingView.swift */; };
+		3193599C2B80C64A00229DE5 /* PropertyListScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193599B2B80C64A00229DE5 /* PropertyListScrollView.swift */; };
 		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
 		31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* HWEndpoints.swift */; };
 		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
@@ -119,6 +120,7 @@
 		319359952B80C01200229DE5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		319359972B80C0B100229DE5 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		319359992B80C18400229DE5 /* OverallRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallRatingView.swift; sourceTree = "<group>"; };
+		3193599B2B80C64A00229DE5 /* PropertyListScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListScrollView.swift; sourceTree = "<group>"; };
 		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		31BE93062B7E9F51003981E2 /* HWEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWEndpoints.swift; sourceTree = "<group>"; };
 		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				319359912B80B2DB00229DE5 /* CellView */,
 				31002F5D2B80510800CCBCFD /* HomePageTableView.swift */,
+				3193599B2B80C64A00229DE5 /* PropertyListScrollView.swift */,
 			);
 			path = PropertyListPage;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				31BE932D2B7EAC6F003981E2 /* PropertyImage.swift in Sources */,
 				319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */,
 				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
+				3193599C2B80C64A00229DE5 /* PropertyListScrollView.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
 				31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */,
 				314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */,
