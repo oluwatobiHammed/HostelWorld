@@ -12,7 +12,7 @@ struct PropertiesCellView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius:  25)
-                .stroke(Color.primary, lineWidth: 0.3) // Change color and lineWidth as needed
+                .stroke(Color.primary, lineWidth: 1) // Change color and lineWidth as needed
                 .clipShape(RoundedRectangle(cornerRadius: 25)) // Apply corner radius using clipShape
                 .background(Color(UIColor(hexString: "#39404a")).opacity(0.1))
             VStack(spacing: 10) {

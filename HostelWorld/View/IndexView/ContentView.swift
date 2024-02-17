@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject private var viewModel = PropertiesViewModel()
-    
     var body: some View {
         NavigationStack {
             // Your main content goes here
