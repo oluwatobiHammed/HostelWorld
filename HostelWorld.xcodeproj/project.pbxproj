@@ -10,14 +10,18 @@
 		31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F592B804C6D00CCBCFD /* MyBackButton.swift */; };
 		31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */; };
 		31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5D2B80510800CCBCFD /* HomePageTableView.swift */; };
-		314C3EDE2B7FA3E6009748B8 /* PropertyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */; };
+		314C3EDE2B7FA3E6009748B8 /* PropertyDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EDD2B7FA3E6009748B8 /* PropertyDetailScreen.swift */; };
 		314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */; };
 		314C3EE42B7FE25E009748B8 /* LoadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE32B7FE25E009748B8 /* LoadImages.swift */; };
-		314C3EE62B7FE380009748B8 /* LoadPropertyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */; };
+		314C3EE62B7FE380009748B8 /* LoadPropertyDetailsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE52B7FE380009748B8 /* LoadPropertyDetailsImage.swift */; };
 		314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE82B800DD0009748B8 /* HWRealmManager.swift */; };
 		314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */; };
 		314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */; };
 		3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193598C2B80AE1200229DE5 /* IndexPage.swift */; };
+		319359942B80B3D800229DE5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359932B80B3D800229DE5 /* TitleView.swift */; };
+		319359962B80C01200229DE5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359952B80C01200229DE5 /* AddressView.swift */; };
+		319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359972B80C0B100229DE5 /* DescriptionView.swift */; };
+		3193599A2B80C18400229DE5 /* OverallRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359992B80C18400229DE5 /* OverallRatingView.swift */; };
 		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
 		31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* HWEndpoints.swift */; };
 		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
@@ -103,14 +107,18 @@
 		31002F592B804C6D00CCBCFD /* MyBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBackButton.swift; sourceTree = "<group>"; };
 		31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		31002F5D2B80510800CCBCFD /* HomePageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableView.swift; sourceTree = "<group>"; };
-		314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyScreen.swift; sourceTree = "<group>"; };
+		314C3EDD2B7FA3E6009748B8 /* PropertyDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailScreen.swift; sourceTree = "<group>"; };
 		314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnLoad.swift"; sourceTree = "<group>"; };
 		314C3EE32B7FE25E009748B8 /* LoadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImages.swift; sourceTree = "<group>"; };
-		314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPropertyImage.swift; sourceTree = "<group>"; };
+		314C3EE52B7FE380009748B8 /* LoadPropertyDetailsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPropertyDetailsImage.swift; sourceTree = "<group>"; };
 		314C3EE82B800DD0009748B8 /* HWRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWRealmManager.swift; sourceTree = "<group>"; };
 		314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethods.swift; sourceTree = "<group>"; };
 		314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScrollView.swift; sourceTree = "<group>"; };
 		3193598C2B80AE1200229DE5 /* IndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPage.swift; sourceTree = "<group>"; };
+		319359932B80B3D800229DE5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		319359952B80C01200229DE5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		319359972B80C0B100229DE5 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		319359992B80C18400229DE5 /* OverallRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallRatingView.swift; sourceTree = "<group>"; };
 		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		31BE93062B7E9F51003981E2 /* HWEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWEndpoints.swift; sourceTree = "<group>"; };
 		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
@@ -208,8 +216,10 @@
 		31002F582B804C4C00CCBCFD /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
 				31002F592B804C6D00CCBCFD /* MyBackButton.swift */,
 				31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */,
+				319359932B80B3D800229DE5 /* TitleView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -220,6 +230,55 @@
 				314C3EE82B800DD0009748B8 /* HWRealmManager.swift */,
 			);
 			path = "DB Manager";
+			sourceTree = "<group>";
+		};
+		3193598E2B80B1EC00229DE5 /* IndexView */ = {
+			isa = PBXGroup;
+			children = (
+				3193598C2B80AE1200229DE5 /* IndexPage.swift */,
+				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
+				31FE20242B7E9A8F000F167E /* ContentView.swift */,
+			);
+			path = IndexView;
+			sourceTree = "<group>";
+		};
+		3193598F2B80B21600229DE5 /* PropertyListPage */ = {
+			isa = PBXGroup;
+			children = (
+				319359912B80B2DB00229DE5 /* CellView */,
+				31002F5D2B80510800CCBCFD /* HomePageTableView.swift */,
+			);
+			path = PropertyListPage;
+			sourceTree = "<group>";
+		};
+		319359902B80B26B00229DE5 /* PropertyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				319359922B80B2F200229DE5 /* CellView */,
+				314C3EDD2B7FA3E6009748B8 /* PropertyDetailScreen.swift */,
+				319359952B80C01200229DE5 /* AddressView.swift */,
+				319359972B80C0B100229DE5 /* DescriptionView.swift */,
+				319359992B80C18400229DE5 /* OverallRatingView.swift */,
+			);
+			path = PropertyDetails;
+			sourceTree = "<group>";
+		};
+		319359912B80B2DB00229DE5 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				31BE934A2B7F6510003981E2 /* VerticalImageView.swift */,
+				31BE93442B7F543C003981E2 /* PropertiesCellView.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		319359922B80B2F200229DE5 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */,
+				314C3EE52B7FE380009748B8 /* LoadPropertyDetailsImage.swift */,
+			);
+			path = CellView;
 			sourceTree = "<group>";
 		};
 		31BE93052B7E9F3D003981E2 /* EndPoint */ = {
@@ -327,17 +386,10 @@
 		31BE93432B7F540B003981E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				319359902B80B26B00229DE5 /* PropertyDetails */,
+				3193598F2B80B21600229DE5 /* PropertyListPage */,
+				3193598E2B80B1EC00229DE5 /* IndexView */,
 				31002F582B804C4C00CCBCFD /* ReusableView */,
-				31FE20242B7E9A8F000F167E /* ContentView.swift */,
-				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
-				31BE93442B7F543C003981E2 /* PropertiesCellView.swift */,
-				31BE934A2B7F6510003981E2 /* VerticalImageView.swift */,
-				314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */,
-				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
-				314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */,
-				314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */,
-				31002F5D2B80510800CCBCFD /* HomePageTableView.swift */,
-				3193598C2B80AE1200229DE5 /* IndexPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -677,16 +729,17 @@
 				31BE93422B7F4DC8003981E2 /* PropertiesResponse.swift in Sources */,
 				314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */,
 				314C3EE42B7FE25E009748B8 /* LoadImages.swift in Sources */,
+				3193599A2B80C18400229DE5 /* OverallRatingView.swift in Sources */,
 				31BE93102B7EA07F003981E2 /* NetworkLogger.swift in Sources */,
 				31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */,
 				31BE930E2B7EA04F003981E2 /* HTTPTask.swift in Sources */,
 				31BE93362B7EB158003981E2 /* SingleProperty.swift in Sources */,
-				314C3EDE2B7FA3E6009748B8 /* PropertyScreen.swift in Sources */,
+				314C3EDE2B7FA3E6009748B8 /* PropertyDetailScreen.swift in Sources */,
 				31BE93222B7EAA95003981E2 /* CityProperties.swift in Sources */,
 				31BE93332B7EB0E5003981E2 /* Decodable+Extension.swift in Sources */,
 				31BE931F2B7EA952003981E2 /* NetworkManagerProtocol.swift in Sources */,
 				31BE93152B7EA118003981E2 /* ParameterEncoding.swift in Sources */,
-				314C3EE62B7FE380009748B8 /* LoadPropertyImage.swift in Sources */,
+				314C3EE62B7FE380009748B8 /* LoadPropertyDetailsImage.swift in Sources */,
 				31BE93382B7EB3E9003981E2 /* CheckIn.swift in Sources */,
 				31BE931D2B7EA93A003981E2 /* NetworkManager.swift in Sources */,
 				31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */,
@@ -699,6 +752,7 @@
 				31BE93292B7EAB8C003981E2 /* CityProperty.swift in Sources */,
 				3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */,
 				31BE932D2B7EAC6F003981E2 /* PropertyImage.swift in Sources */,
+				319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */,
 				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
 				31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */,
@@ -709,6 +763,8 @@
 				31BE93452B7F543C003981E2 /* PropertiesCellView.swift in Sources */,
 				31BE934D2B7F88E4003981E2 /* FontConstants.swift in Sources */,
 				31BE932F2B7EACD2003981E2 /* OverallRating.swift in Sources */,
+				319359962B80C01200229DE5 /* AddressView.swift in Sources */,
+				319359942B80B3D800229DE5 /* TitleView.swift in Sources */,
 				314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */,
 				314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */,
 				31BE933F2B7EBA31003981E2 /* PropertiesViewModel.swift in Sources */,

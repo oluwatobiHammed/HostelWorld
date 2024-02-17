@@ -37,7 +37,7 @@ struct HomePageTableView: View {
         .scrollIndicators(.hidden)
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: CityProperty.self) { property in
-            PropertyScreen(id: property.id)
+            PropertyDetailScreen(id: property.id)
         }
         .alert("Retry", isPresented: $showAlert) {
             Button(action: {

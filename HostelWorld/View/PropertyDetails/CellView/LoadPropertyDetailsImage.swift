@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoadPropertyImage: View {
+struct LoadPropertyDetailsImage: View {
     
     let images: [PropertyImage]
     
