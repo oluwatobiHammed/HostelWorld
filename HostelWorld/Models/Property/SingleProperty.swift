@@ -11,7 +11,7 @@ import Realm
 @objcMembers
 class SingleProperty: Object, Decodable {
     private enum CodingKeys: String, CodingKey {
-        case id, name, rating, description, city, address1, address2, directions, paymentMethods, policies, totalRatings, latitude, longitude, type, images, overallRating, depositPercentage, checkIn
+        case id, name, rating, description, city, address1, address2, directions, paymentMethods, policies, totalRatings, latitude, longitude, type, images, depositPercentage, checkIn
         
     }
     
@@ -24,11 +24,13 @@ class SingleProperty: Object, Decodable {
         self.rating                   = try container.decodeIfPresent(Rating.self, forKey: .rating)
         self.latitude                 = try container.decodeIfPresent(String.self, forKey: .latitude)
         self.longitude                = try container.decodeIfPresent(String.self, forKey: .longitude)
+        self.address1                 = try container.decodeIfPresent(String.self, forKey: .address1)
+        self.address2                 = try container.decodeIfPresent(String.self, forKey: .address2)
         self.type                     = try container.decodeIfPresent(String.self, forKey: .type)
         self.totalRatings             = try container.decodeIfPresent(String.self, forKey: .totalRatings)
-        self.depositPercentage        = try container.decodeIfPresent(String.self, forKey: .depositPercentage)
+        self.depositPercentage        = try container.decode(Int.self, forKey: .depositPercentage)
         self.directions               = try container.decodeIfPresent(String.self, forKey: .directions)
-        self.propertDescription       = try container.decodeIfPresent(String.self, forKey: .description)
+        self.propertyDescription      = try container.decodeIfPresent(String.self, forKey: .description)
         if let results                = try container.decodeIfPresent(Array<PropertyImage>.self, forKey: .images) {
             self.images.append(objectsIn: results)
         }
@@ -38,7 +40,6 @@ class SingleProperty: Object, Decodable {
         if let results                = try container.decodeIfPresent(Array<String>.self, forKey: .paymentMethods) {
             self.paymentMethods.append(objectsIn: results)
         }
-        self.overallRating            = try container.decodeIfPresent(OverallRating.self, forKey: .overallRating)
         
     }
     
@@ -51,15 +52,16 @@ class SingleProperty: Object, Decodable {
     dynamic var city                : City?
     dynamic var latitude            : String?
     dynamic var longitude           : String?
+    dynamic var address1            : String?
+    dynamic var address2            : String?
     dynamic var type                : String?
     dynamic var totalRatings        : String?
-    dynamic var depositPercentage   : String?
-    dynamic var propertDescription  : String?
+    dynamic var depositPercentage   : Int = 0
+    dynamic var propertyDescription : String?
     dynamic var directions          : String?
     dynamic var images              = List<PropertyImage>()
     dynamic var policies            = List<String>()
     dynamic var paymentMethods      = List<String>()
-    dynamic var overallRating       : OverallRating?
     dynamic var checkIn             : CheckIn?
     dynamic var rating              : Rating?
     

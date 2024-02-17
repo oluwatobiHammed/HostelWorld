@@ -10,7 +10,7 @@ import Foundation
 // Protocol defining the contract for a network manager.
 protocol NetworkManagerProtocol {
     func getCityProperties() async -> ResultApi<CityProperties, Error>
-    func getProperty(id: Int) async -> ResultApi<SingleProperty, Error>
+    func getProperty(id: String) async -> ResultApi<SingleProperty, Error>
 }
 
 

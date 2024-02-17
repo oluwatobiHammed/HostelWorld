@@ -78,7 +78,7 @@ struct NetworkManager: NetworkManagerProtocol {
                         // If unable to decode, return a failure ResultApi with an appropriate error message.
                         return .failure(NSError(domain: "", code: response.statusCode, userInfo: [NSLocalizedDescriptionKey : NetworkResponse.unableToDecode.rawValue]))
                     }
-                    
+                    await HWRealmManager.shared.updateOrSave(realmObject: properties)
                     // Return a success ResultApi containing the decoded CityProperties.
                     return .success(properties)
                 } catch {
@@ -136,7 +136,7 @@ struct NetworkManager: NetworkManagerProtocol {
        }
      */
     
-    func getProperty(id: Int) async ->  ResultApi<SingleProperty, Error>  {
+    func getProperty(id: String) async ->  ResultApi<SingleProperty, Error>  {
         // Make an asynchronous request to fetch a property with the given ID using the router.
         let (data, response, error) = await router.request(.getProperty(id: id))
         
@@ -172,6 +172,7 @@ struct NetworkManager: NetworkManagerProtocol {
                         return .failure(NSError(domain: "", code: response.statusCode, userInfo: [NSLocalizedDescriptionKey : NetworkResponse.unableToDecode.rawValue]))
                     }
                     
+                    await HWRealmManager.shared.updateOrSave(realmObject: property)
                     // Return a success ResultApi containing the decoded SingleProperty.
                     return .success(property)
                 } catch {

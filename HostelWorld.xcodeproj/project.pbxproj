@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F592B804C6D00CCBCFD /* MyBackButton.swift */; };
+		31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */; };
+		31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5D2B80510800CCBCFD /* HomePageTableView.swift */; };
+		314C3EDE2B7FA3E6009748B8 /* PropertyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */; };
+		314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */; };
+		314C3EE42B7FE25E009748B8 /* LoadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE32B7FE25E009748B8 /* LoadImages.swift */; };
+		314C3EE62B7FE380009748B8 /* LoadPropertyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */; };
+		314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE82B800DD0009748B8 /* HWRealmManager.swift */; };
+		314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */; };
+		314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */; };
 		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
 		31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* HWEndpoints.swift */; };
 		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
@@ -31,6 +41,37 @@
 		31BE93382B7EB3E9003981E2 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93372B7EB3E9003981E2 /* CheckIn.swift */; };
 		31BE933C2B7EB7A0003981E2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE933B2B7EB7A0003981E2 /* Rating.swift */; };
 		31BE933F2B7EBA31003981E2 /* PropertiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE933E2B7EBA31003981E2 /* PropertiesViewModel.swift */; };
+		31BE93422B7F4DC8003981E2 /* PropertiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93412B7F4DC8003981E2 /* PropertiesResponse.swift */; };
+		31BE93452B7F543C003981E2 /* PropertiesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93442B7F543C003981E2 /* PropertiesCellView.swift */; };
+		31BE93472B7F5AEB003981E2 /* UIColor+HexStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93462B7F5AEB003981E2 /* UIColor+HexStringHelper.swift */; };
+		31BE934B2B7F6510003981E2 /* VerticalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE934A2B7F6510003981E2 /* VerticalImageView.swift */; };
+		31BE934D2B7F88E4003981E2 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE934C2B7F88E4003981E2 /* FontConstants.swift */; };
+		31BE93752B7F894C003981E2 /* Effra-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93522B7F894C003981E2 /* Effra-BoldItalic.ttf */; };
+		31BE93772B7F894C003981E2 /* Effra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93542B7F894C003981E2 /* Effra-Regular.ttf */; };
+		31BE93782B7F894C003981E2 /* Effra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93552B7F894C003981E2 /* Effra-Bold.ttf */; };
+		31BE93792B7F894C003981E2 /* Effra-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93562B7F894C003981E2 /* Effra-Italic.ttf */; };
+		31BE937B2B7F894C003981E2 /* EffraLight-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93592B7F894C003981E2 /* EffraLight-Italic.ttf */; };
+		31BE937C2B7F894C003981E2 /* EffraLight-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE935A2B7F894C003981E2 /* EffraLight-Regular.ttf */; };
+		31BE937D2B7F894C003981E2 /* EffraHeavy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE935C2B7F894C003981E2 /* EffraHeavy-Regular.ttf */; };
+		31BE937E2B7F894C003981E2 /* EffraHeavy-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE935D2B7F894C003981E2 /* EffraHeavy-Italic.ttf */; };
+		31BE93812B7F894C003981E2 /* EffraMedium-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93612B7F894C003981E2 /* EffraMedium-Regular.ttf */; };
+		31BE93822B7F894C003981E2 /* EffraMedium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93622B7F894C003981E2 /* EffraMedium-Italic.ttf */; };
+		31BE93832B7F894C003981E2 /* Univers-CondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93642B7F894C003981E2 /* Univers-CondensedLight.ttf */; };
+		31BE93842B7F894C003981E2 /* Univers-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93652B7F894C003981E2 /* Univers-Light.ttf */; };
+		31BE93852B7F894C003981E2 /* Univers-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93662B7F894C003981E2 /* Univers-Bold.ttf */; };
+		31BE93862B7F894C003981E2 /* Univers-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93672B7F894C003981E2 /* Univers-CondensedBold.ttf */; };
+		31BE93872B7F894C003981E2 /* Univers-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93682B7F894C003981E2 /* Univers-Condensed.ttf */; };
+		31BE93882B7F894C003981E2 /* Univers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93692B7F894C003981E2 /* Univers.ttf */; };
+		31BE93892B7F894C003981E2 /* Univers-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936A2B7F894C003981E2 /* Univers-BlackOblique.ttf */; };
+		31BE938A2B7F894C003981E2 /* Univers-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936B2B7F894C003981E2 /* Univers-Oblique.ttf */; };
+		31BE938B2B7F894C003981E2 /* Univers-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936C2B7F894C003981E2 /* Univers-BoldOblique.ttf */; };
+		31BE938C2B7F894C003981E2 /* Univers-CondensedOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936D2B7F894C003981E2 /* Univers-CondensedOblique.ttf */; };
+		31BE938D2B7F894C003981E2 /* Univers-CondensedBoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936E2B7F894C003981E2 /* Univers-CondensedBoldOblique.ttf */; };
+		31BE938E2B7F894C003981E2 /* Univers-CondensedLightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE936F2B7F894C003981E2 /* Univers-CondensedLightOblique.ttf */; };
+		31BE938F2B7F894C003981E2 /* Univers-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93702B7F894C003981E2 /* Univers-LightOblique.ttf */; };
+		31BE93902B7F894C003981E2 /* Univers-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93712B7F894C003981E2 /* Univers-Black.ttf */; };
+		31BE93912B7F894C003981E2 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93732B7F894C003981E2 /* Montserrat-Bold.ttf */; };
+		31BE93922B7F894C003981E2 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93742B7F894C003981E2 /* Montserrat-Regular.ttf */; };
 		31FE20232B7E9A8F000F167E /* HostelWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */; };
 		31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20242B7E9A8F000F167E /* ContentView.swift */; };
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
@@ -58,6 +99,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31002F592B804C6D00CCBCFD /* MyBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBackButton.swift; sourceTree = "<group>"; };
+		31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		31002F5D2B80510800CCBCFD /* HomePageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableView.swift; sourceTree = "<group>"; };
+		314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyScreen.swift; sourceTree = "<group>"; };
+		314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnLoad.swift"; sourceTree = "<group>"; };
+		314C3EE32B7FE25E009748B8 /* LoadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImages.swift; sourceTree = "<group>"; };
+		314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPropertyImage.swift; sourceTree = "<group>"; };
+		314C3EE82B800DD0009748B8 /* HWRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWRealmManager.swift; sourceTree = "<group>"; };
+		314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethods.swift; sourceTree = "<group>"; };
+		314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScrollView.swift; sourceTree = "<group>"; };
 		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		31BE93062B7E9F51003981E2 /* HWEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWEndpoints.swift; sourceTree = "<group>"; };
 		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
@@ -81,6 +132,38 @@
 		31BE933B2B7EB7A0003981E2 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		31BE933E2B7EBA31003981E2 /* PropertiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewModel.swift; sourceTree = "<group>"; };
 		31BE93402B7EBEDE003981E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		31BE93412B7F4DC8003981E2 /* PropertiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesResponse.swift; sourceTree = "<group>"; };
+		31BE93442B7F543C003981E2 /* PropertiesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesCellView.swift; sourceTree = "<group>"; };
+		31BE93462B7F5AEB003981E2 /* UIColor+HexStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexStringHelper.swift"; sourceTree = "<group>"; };
+		31BE934A2B7F6510003981E2 /* VerticalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalImageView.swift; sourceTree = "<group>"; };
+		31BE934C2B7F88E4003981E2 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
+		31BE93522B7F894C003981E2 /* Effra-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Effra-BoldItalic.ttf"; sourceTree = "<group>"; };
+		31BE93542B7F894C003981E2 /* Effra-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Effra-Regular.ttf"; sourceTree = "<group>"; };
+		31BE93552B7F894C003981E2 /* Effra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Effra-Bold.ttf"; sourceTree = "<group>"; };
+		31BE93562B7F894C003981E2 /* Effra-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Effra-Italic.ttf"; sourceTree = "<group>"; };
+		31BE93592B7F894C003981E2 /* EffraLight-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraLight-Italic.ttf"; sourceTree = "<group>"; };
+		31BE935A2B7F894C003981E2 /* EffraLight-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraLight-Regular.ttf"; sourceTree = "<group>"; };
+		31BE935C2B7F894C003981E2 /* EffraHeavy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraHeavy-Regular.ttf"; sourceTree = "<group>"; };
+		31BE935D2B7F894C003981E2 /* EffraHeavy-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraHeavy-Italic.ttf"; sourceTree = "<group>"; };
+		31BE93612B7F894C003981E2 /* EffraMedium-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraMedium-Regular.ttf"; sourceTree = "<group>"; };
+		31BE93622B7F894C003981E2 /* EffraMedium-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EffraMedium-Italic.ttf"; sourceTree = "<group>"; };
+		31BE93642B7F894C003981E2 /* Univers-CondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-CondensedLight.ttf"; sourceTree = "<group>"; };
+		31BE93652B7F894C003981E2 /* Univers-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-Light.ttf"; sourceTree = "<group>"; };
+		31BE93662B7F894C003981E2 /* Univers-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-Bold.ttf"; sourceTree = "<group>"; };
+		31BE93672B7F894C003981E2 /* Univers-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-CondensedBold.ttf"; sourceTree = "<group>"; };
+		31BE93682B7F894C003981E2 /* Univers-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-Condensed.ttf"; sourceTree = "<group>"; };
+		31BE93692B7F894C003981E2 /* Univers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Univers.ttf; sourceTree = "<group>"; };
+		31BE936A2B7F894C003981E2 /* Univers-BlackOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-BlackOblique.ttf"; sourceTree = "<group>"; };
+		31BE936B2B7F894C003981E2 /* Univers-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-Oblique.ttf"; sourceTree = "<group>"; };
+		31BE936C2B7F894C003981E2 /* Univers-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-BoldOblique.ttf"; sourceTree = "<group>"; };
+		31BE936D2B7F894C003981E2 /* Univers-CondensedOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-CondensedOblique.ttf"; sourceTree = "<group>"; };
+		31BE936E2B7F894C003981E2 /* Univers-CondensedBoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-CondensedBoldOblique.ttf"; sourceTree = "<group>"; };
+		31BE936F2B7F894C003981E2 /* Univers-CondensedLightOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-CondensedLightOblique.ttf"; sourceTree = "<group>"; };
+		31BE93702B7F894C003981E2 /* Univers-LightOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-LightOblique.ttf"; sourceTree = "<group>"; };
+		31BE93712B7F894C003981E2 /* Univers-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Univers-Black.ttf"; sourceTree = "<group>"; };
+		31BE93732B7F894C003981E2 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		31BE93742B7F894C003981E2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		31BE93932B7F9A26003981E2 /* Shrikhand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shrikhand-Regular.ttf"; sourceTree = "<group>"; };
 		31FE201F2B7E9A8F000F167E /* HostelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldApp.swift; sourceTree = "<group>"; };
 		31FE20242B7E9A8F000F167E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +203,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31002F582B804C4C00CCBCFD /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				31002F592B804C6D00CCBCFD /* MyBackButton.swift */,
+				31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		314C3EE72B800D9C009748B8 /* DB Manager */ = {
+			isa = PBXGroup;
+			children = (
+				314C3EE82B800DD0009748B8 /* HWRealmManager.swift */,
+			);
+			path = "DB Manager";
+			sourceTree = "<group>";
+		};
 		31BE93052B7E9F3D003981E2 /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +262,6 @@
 		31BE931B2B7EA8D6003981E2 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
-				31FE204C2B7E9B43000F167E /* Constants */,
 				31BE93052B7E9F3D003981E2 /* EndPoint */,
 				31BE93082B7E9FD2003981E2 /* Service */,
 				31BE93112B7EA0C7003981E2 /* Encoding */,
@@ -176,6 +275,7 @@
 			children = (
 				31BE93342B7EB120003981E2 /* Property */,
 				31BE93302B7EACF1003981E2 /* CityPropertyList */,
+				31BE93412B7F4DC8003981E2 /* PropertiesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,7 +295,10 @@
 		31BE93312B7EB0C3003981E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				31FE204C2B7E9B43000F167E /* Constants */,
 				31BE93322B7EB0E5003981E2 /* Decodable+Extension.swift */,
+				31BE93462B7F5AEB003981E2 /* UIColor+HexStringHelper.swift */,
+				314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,6 +309,7 @@
 				31BE93352B7EB158003981E2 /* SingleProperty.swift */,
 				31BE93372B7EB3E9003981E2 /* CheckIn.swift */,
 				31BE933B2B7EB7A0003981E2 /* Rating.swift */,
+				314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */,
 			);
 			path = Property;
 			sourceTree = "<group>";
@@ -216,6 +320,121 @@
 				31BE933E2B7EBA31003981E2 /* PropertiesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		31BE93432B7F540B003981E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31002F582B804C4C00CCBCFD /* ReusableView */,
+				31FE20242B7E9A8F000F167E /* ContentView.swift */,
+				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
+				31BE93442B7F543C003981E2 /* PropertiesCellView.swift */,
+				31BE934A2B7F6510003981E2 /* VerticalImageView.swift */,
+				314C3EDD2B7FA3E6009748B8 /* PropertyScreen.swift */,
+				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
+				314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */,
+				314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */,
+				31002F5D2B80510800CCBCFD /* HomePageTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31BE934E2B7F892F003981E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31BE934F2B7F894C003981E2 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		31BE934F2B7F894C003981E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93932B7F9A26003981E2 /* Shrikhand-Regular.ttf */,
+				31BE93502B7F894C003981E2 /* EffraFont */,
+				31BE93632B7F894C003981E2 /* Univers */,
+				31BE93722B7F894C003981E2 /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		31BE93502B7F894C003981E2 /* EffraFont */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93512B7F894C003981E2 /* Effra */,
+				31BE93572B7F894C003981E2 /* Effra Light */,
+				31BE935B2B7F894C003981E2 /* Effra Heavy */,
+				31BE935F2B7F894C003981E2 /* Effra Medium */,
+			);
+			path = EffraFont;
+			sourceTree = "<group>";
+		};
+		31BE93512B7F894C003981E2 /* Effra */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93522B7F894C003981E2 /* Effra-BoldItalic.ttf */,
+				31BE93542B7F894C003981E2 /* Effra-Regular.ttf */,
+				31BE93552B7F894C003981E2 /* Effra-Bold.ttf */,
+				31BE93562B7F894C003981E2 /* Effra-Italic.ttf */,
+			);
+			path = Effra;
+			sourceTree = "<group>";
+		};
+		31BE93572B7F894C003981E2 /* Effra Light */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93592B7F894C003981E2 /* EffraLight-Italic.ttf */,
+				31BE935A2B7F894C003981E2 /* EffraLight-Regular.ttf */,
+			);
+			path = "Effra Light";
+			sourceTree = "<group>";
+		};
+		31BE935B2B7F894C003981E2 /* Effra Heavy */ = {
+			isa = PBXGroup;
+			children = (
+				31BE935C2B7F894C003981E2 /* EffraHeavy-Regular.ttf */,
+				31BE935D2B7F894C003981E2 /* EffraHeavy-Italic.ttf */,
+			);
+			path = "Effra Heavy";
+			sourceTree = "<group>";
+		};
+		31BE935F2B7F894C003981E2 /* Effra Medium */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93612B7F894C003981E2 /* EffraMedium-Regular.ttf */,
+				31BE93622B7F894C003981E2 /* EffraMedium-Italic.ttf */,
+			);
+			path = "Effra Medium";
+			sourceTree = "<group>";
+		};
+		31BE93632B7F894C003981E2 /* Univers */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93642B7F894C003981E2 /* Univers-CondensedLight.ttf */,
+				31BE93652B7F894C003981E2 /* Univers-Light.ttf */,
+				31BE93662B7F894C003981E2 /* Univers-Bold.ttf */,
+				31BE93672B7F894C003981E2 /* Univers-CondensedBold.ttf */,
+				31BE93682B7F894C003981E2 /* Univers-Condensed.ttf */,
+				31BE93692B7F894C003981E2 /* Univers.ttf */,
+				31BE936A2B7F894C003981E2 /* Univers-BlackOblique.ttf */,
+				31BE936B2B7F894C003981E2 /* Univers-Oblique.ttf */,
+				31BE936C2B7F894C003981E2 /* Univers-BoldOblique.ttf */,
+				31BE936D2B7F894C003981E2 /* Univers-CondensedOblique.ttf */,
+				31BE936E2B7F894C003981E2 /* Univers-CondensedBoldOblique.ttf */,
+				31BE936F2B7F894C003981E2 /* Univers-CondensedLightOblique.ttf */,
+				31BE93702B7F894C003981E2 /* Univers-LightOblique.ttf */,
+				31BE93712B7F894C003981E2 /* Univers-Black.ttf */,
+			);
+			path = Univers;
+			sourceTree = "<group>";
+		};
+		31BE93722B7F894C003981E2 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				31BE93732B7F894C003981E2 /* Montserrat-Bold.ttf */,
+				31BE93742B7F894C003981E2 /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
 			sourceTree = "<group>";
 		};
 		31FE20162B7E9A8F000F167E = {
@@ -241,13 +460,14 @@
 		31FE20212B7E9A8F000F167E /* HostelWorld */ = {
 			isa = PBXGroup;
 			children = (
+				314C3EE72B800D9C009748B8 /* DB Manager */,
+				31BE934E2B7F892F003981E2 /* Resources */,
 				31BE93402B7EBEDE003981E2 /* Info.plist */,
 				31BE93312B7EB0C3003981E2 /* Utils */,
 				31BE93202B7EAA7A003981E2 /* Models */,
 				31BE931B2B7EA8D6003981E2 /* Network Manager */,
 				31BE933D2B7EBA16003981E2 /* ViewModel */,
-				31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */,
-				31FE20242B7E9A8F000F167E /* ContentView.swift */,
+				31BE93432B7F540B003981E2 /* View */,
 				31FE20262B7E9A92000F167E /* Assets.xcassets */,
 				31FE20282B7E9A92000F167E /* Preview Content */,
 			);
@@ -283,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				31BE93032B7E9CD3003981E2 /* APIConstants.swift */,
+				31BE934C2B7F88E4003981E2 /* FontConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -398,8 +619,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BE93922B7F894C003981E2 /* Montserrat-Regular.ttf in Resources */,
+				31BE93892B7F894C003981E2 /* Univers-BlackOblique.ttf in Resources */,
+				31BE938A2B7F894C003981E2 /* Univers-Oblique.ttf in Resources */,
+				31BE93842B7F894C003981E2 /* Univers-Light.ttf in Resources */,
+				31BE93752B7F894C003981E2 /* Effra-BoldItalic.ttf in Resources */,
+				31BE938F2B7F894C003981E2 /* Univers-LightOblique.ttf in Resources */,
+				31BE93852B7F894C003981E2 /* Univers-Bold.ttf in Resources */,
+				31BE938C2B7F894C003981E2 /* Univers-CondensedOblique.ttf in Resources */,
+				31BE938E2B7F894C003981E2 /* Univers-CondensedLightOblique.ttf in Resources */,
+				31BE938B2B7F894C003981E2 /* Univers-BoldOblique.ttf in Resources */,
 				31FE202A2B7E9A92000F167E /* Preview Assets.xcassets in Resources */,
+				31BE93902B7F894C003981E2 /* Univers-Black.ttf in Resources */,
+				31BE93772B7F894C003981E2 /* Effra-Regular.ttf in Resources */,
+				31BE93882B7F894C003981E2 /* Univers.ttf in Resources */,
+				31BE93872B7F894C003981E2 /* Univers-Condensed.ttf in Resources */,
+				31BE93812B7F894C003981E2 /* EffraMedium-Regular.ttf in Resources */,
 				31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */,
+				31BE937C2B7F894C003981E2 /* EffraLight-Regular.ttf in Resources */,
+				31BE93912B7F894C003981E2 /* Montserrat-Bold.ttf in Resources */,
+				31BE93832B7F894C003981E2 /* Univers-CondensedLight.ttf in Resources */,
+				31BE93792B7F894C003981E2 /* Effra-Italic.ttf in Resources */,
+				31BE93822B7F894C003981E2 /* EffraMedium-Italic.ttf in Resources */,
+				31BE937B2B7F894C003981E2 /* EffraLight-Italic.ttf in Resources */,
+				31BE93782B7F894C003981E2 /* Effra-Bold.ttf in Resources */,
+				31BE937E2B7F894C003981E2 /* EffraHeavy-Italic.ttf in Resources */,
+				31BE937D2B7F894C003981E2 /* EffraHeavy-Regular.ttf in Resources */,
+				31BE938D2B7F894C003981E2 /* Univers-CondensedBoldOblique.ttf in Resources */,
+				31BE93862B7F894C003981E2 /* Univers-CondensedBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,13 +671,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31BE93422B7F4DC8003981E2 /* PropertiesResponse.swift in Sources */,
+				314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */,
+				314C3EE42B7FE25E009748B8 /* LoadImages.swift in Sources */,
 				31BE93102B7EA07F003981E2 /* NetworkLogger.swift in Sources */,
+				31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */,
 				31BE930E2B7EA04F003981E2 /* HTTPTask.swift in Sources */,
 				31BE93362B7EB158003981E2 /* SingleProperty.swift in Sources */,
+				314C3EDE2B7FA3E6009748B8 /* PropertyScreen.swift in Sources */,
 				31BE93222B7EAA95003981E2 /* CityProperties.swift in Sources */,
 				31BE93332B7EB0E5003981E2 /* Decodable+Extension.swift in Sources */,
 				31BE931F2B7EA952003981E2 /* NetworkManagerProtocol.swift in Sources */,
 				31BE93152B7EA118003981E2 /* ParameterEncoding.swift in Sources */,
+				314C3EE62B7FE380009748B8 /* LoadPropertyImage.swift in Sources */,
 				31BE93382B7EB3E9003981E2 /* CheckIn.swift in Sources */,
 				31BE931D2B7EA93A003981E2 /* NetworkManager.swift in Sources */,
 				31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */,
@@ -439,12 +692,21 @@
 				31BE932B2B7EABFF003981E2 /* City.swift in Sources */,
 				31FE20232B7E9A8F000F167E /* HostelWorldApp.swift in Sources */,
 				31BE930C2B7EA01C003981E2 /* HTTPMethod.swift in Sources */,
+				31BE93472B7F5AEB003981E2 /* UIColor+HexStringHelper.swift in Sources */,
 				31BE93292B7EAB8C003981E2 /* CityProperty.swift in Sources */,
 				31BE932D2B7EAC6F003981E2 /* PropertyImage.swift in Sources */,
+				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
+				31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */,
+				314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */,
 				31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */,
 				31BE933C2B7EB7A0003981E2 /* Rating.swift in Sources */,
+				31BE934B2B7F6510003981E2 /* VerticalImageView.swift in Sources */,
+				31BE93452B7F543C003981E2 /* PropertiesCellView.swift in Sources */,
+				31BE934D2B7F88E4003981E2 /* FontConstants.swift in Sources */,
 				31BE932F2B7EACD2003981E2 /* OverallRating.swift in Sources */,
+				314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */,
+				314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */,
 				31BE933F2B7EBA31003981E2 /* PropertiesViewModel.swift in Sources */,
 				31BE93132B7EA0E9003981E2 /* URLParameterEncoding.swift in Sources */,
 				31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */,
@@ -608,6 +870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_MODE_STATE = YES;
@@ -621,6 +884,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,6 +907,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_MODE_STATE = YES;
@@ -656,6 +921,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -721,6 +987,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3K5BT8EBBM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OluwaAppCreator.HostelWorldUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -739,6 +1006,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3K5BT8EBBM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OluwaAppCreator.HostelWorldUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

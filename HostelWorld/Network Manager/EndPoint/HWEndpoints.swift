@@ -10,7 +10,7 @@ import Foundation
 // Enumeration defining different endpoints for the network API.
 enum HWEndpoints {
     case getCityProperties
-    case getProperty(id: Int)
+    case getProperty(id: String)
 }
 
 // Extension providing conformance to the EndPointType protocol.
@@ -27,7 +27,7 @@ extension HWEndpoints: EndPointType {
         case .getCityProperties:
             return kAPI.Endpoints.city
         case .getProperty(let id):
-            return kAPI.Endpoints.property + "\(id)"
+            return kAPI.Endpoints.property + id
         }
     }
 

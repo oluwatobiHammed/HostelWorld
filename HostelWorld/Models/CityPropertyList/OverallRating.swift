@@ -11,8 +11,20 @@ import Realm
 @objcMembers
 class OverallRating: EmbeddedObject, Decodable {
     
-    dynamic var suffix                 : String!
-    dynamic var prefix                 : String!
+    
+    private enum CodingKeys: String, CodingKey {
+           case overall, numberOfRatings
+       }
+    
+    public required convenience init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.overall.value                     = try container.decodeIfPresent(Int.self, forKey: .overall)
+        self.numberOfRatings.value                     = try container.decodeIfPresent(Int.self, forKey: .numberOfRatings)
+    }
+    
+    var overall                        = RealmProperty<Int?>()
+    var numberOfRatings                 = RealmProperty<Int?>()
     
 }
 
