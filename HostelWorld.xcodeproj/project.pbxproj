@@ -17,6 +17,7 @@
 		314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE82B800DD0009748B8 /* HWRealmManager.swift */; };
 		314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */; };
 		314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */; };
+		3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193598C2B80AE1200229DE5 /* IndexPage.swift */; };
 		31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93032B7E9CD3003981E2 /* APIConstants.swift */; };
 		31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93062B7E9F51003981E2 /* HWEndpoints.swift */; };
 		31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BE93092B7E9FED003981E2 /* EndPointType.swift */; };
@@ -109,6 +110,7 @@
 		314C3EE82B800DD0009748B8 /* HWRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWRealmManager.swift; sourceTree = "<group>"; };
 		314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethods.swift; sourceTree = "<group>"; };
 		314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScrollView.swift; sourceTree = "<group>"; };
+		3193598C2B80AE1200229DE5 /* IndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPage.swift; sourceTree = "<group>"; };
 		31BE93032B7E9CD3003981E2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		31BE93062B7E9F51003981E2 /* HWEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWEndpoints.swift; sourceTree = "<group>"; };
 		31BE93092B7E9FED003981E2 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				314C3EE52B7FE380009748B8 /* LoadPropertyImage.swift */,
 				314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */,
 				31002F5D2B80510800CCBCFD /* HomePageTableView.swift */,
+				3193598C2B80AE1200229DE5 /* IndexPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				31BE930C2B7EA01C003981E2 /* HTTPMethod.swift in Sources */,
 				31BE93472B7F5AEB003981E2 /* UIColor+HexStringHelper.swift in Sources */,
 				31BE93292B7EAB8C003981E2 /* CityProperty.swift in Sources */,
+				3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */,
 				31BE932D2B7EAC6F003981E2 /* PropertyImage.swift in Sources */,
 				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
@@ -881,7 +885,6 @@
 				INFOPLIST_FILE = HostelWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -918,7 +921,6 @@
 				INFOPLIST_FILE = HostelWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
