@@ -11,20 +11,18 @@ struct MyBackButton: View {
     var label: String
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
+        
         Button(action: {
-             presentationMode.wrappedValue.dismiss()
-         }) {
-             HStack {
-                 Image(systemName: "chevron.backward")
-                 Text(label)
-                     .padding(.leading, -5)
-                 Spacer()
-             }
-             .foregroundColor(.blue)
-         }
-         .padding()
-         .padding(.leading, -27)
-         .padding(.trailing, -30)
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack(spacing: 3) {
+                Image(systemName: "chevron.backward")
+                Text(label)
+                Spacer()
+            }
+            .foregroundColor(.blue)
+        }.padding(.horizontal, -10) // Adjust as needed
+        
     }
 }
 

@@ -46,8 +46,6 @@
 	<dict>
 		<key>UIColorName</key>
 		<string>LunchScreenColor</string>
-		<key>UIImageName</key>
-		<string>logo</string>
 		<key>UILaunchScreen</key>
 		<string></string>
 	</dict>

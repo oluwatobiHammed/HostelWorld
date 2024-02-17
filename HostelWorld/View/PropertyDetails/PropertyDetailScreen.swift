@@ -70,9 +70,25 @@ struct PropertyDetailScreen: View {
         }
             
         .navigationTitle(viewModel.property?.property?.name ?? "")
+        //.navigationBarTitle(viewModel.property?.property?.name ?? "", displayMode: .inline)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: MyBackButton(label: viewModel.property?.property?.city?.country ?? ""))
+            // Add the toolbar
+                 .toolbar {
+                     // Specify the placement as navigationBarLeading
+                     ToolbarItem(placement: .navigationBarLeading) {
+                         // Content for the leading side of the navigation bar
+                         // This could be buttons, images, etc.
+                         // Example:
+//                         Button("Back") {
+//                             // Action when the button is tapped
+//                         }
+                         BackButtonWithTransition(label: viewModel.property?.property?.city?.country ?? "")
+                        // MyBackButton(label: viewModel.property?.property?.city?.country ?? "")
+                     }
+
+                     // You can add more ToolbarItem for other placements if needed
+                 }
             
             if !isViewVisible {
                 Spacer()
