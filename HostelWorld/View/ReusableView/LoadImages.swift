@@ -32,7 +32,13 @@ struct LoadImages: View {
                 
             case .empty:
                 // Placeholder view while loading
-                ProgressView()
+               // ProgressView()
+                Image(.photo)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: width, height: height)
+                    .background(Color.clear)
+                    .padding()
             @unknown default:
                 fatalError()
             }

@@ -15,7 +15,7 @@ struct VerticalImageView: View {
             ForEach(images.indices, id: \.self) { index in
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 0) {
-                        LoadImages( width: UIScreen.main.bounds.width - 70, height: 100,urlString: images[index].prefix+images[index].suffix)
+                        LoadImages(width: UIScreen.main.bounds.width - 70, height: 100,urlString: images[index].prefix+images[index].suffix)
                         
                     }
                     

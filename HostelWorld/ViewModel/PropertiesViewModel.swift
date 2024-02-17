@@ -16,7 +16,9 @@ class PropertiesViewModel: ObservableObject {
     // Published property to trigger updates when the properties data changes.
     @Published var property: PropertyScreenResponse?
     
-    @Published var isLoading: Bool = true
+    @Published var isLoading: Bool = false
+    
+    @Published var images: [PropertyImage] = []
     
     // Instance of a NetworkManager conforming to NetworkManagerProtocol.
     private let network: NetworkManagerProtocol
@@ -27,11 +29,12 @@ class PropertiesViewModel: ObservableObject {
     }
     
     // Asynchronously fetch city properties and update the properties variable.
-   @MainActor func getProperties() async -> PropertiesResponse  {
-        
+   @MainActor func getProperties() async   {
+       isLoading = true
         if let cityProperty = HWRealmManager.shared.cityProperties, !cityProperty.isInvalidated, !cityProperty.properties.isEmpty {
             let result = Array(cityProperty.properties)
-            return PropertiesResponse(properties: result, error: nil)
+            properties = PropertiesResponse(properties: result, error: nil)
+            isLoading = false
         } else {
             // Make an asynchronous network request to get city properties.
             let result = await network.getCityProperties()
@@ -40,24 +43,26 @@ class PropertiesViewModel: ObservableObject {
             switch result {
             case .failure(let error):
                 // If there is a network error, return a PropertiesResponse with the error.
-                return PropertiesResponse(properties: [], error: error)
-                
+                properties = PropertiesResponse(properties: [], error: error)
+                isLoading = false
             case .success(let properties):
                 // If the network request is successful, return a PropertiesResponse with the fetched properties.
-                guard let result = properties?.properties else {return  PropertiesResponse(properties: [], error: nil) }
+                guard let result = properties?.properties else {return}
                 let propertyList = Array(result)
-                return PropertiesResponse(properties: propertyList, error: nil)
+                self.properties = PropertiesResponse(properties: propertyList, error: nil)
+                isLoading = false
             }
         }
         
     }
     
     // Asynchronously fetch city properties and update the properties variable.
-    @MainActor func getProperty(id: String) async -> PropertyScreenResponse  {
+    @MainActor func getProperty(id: String) async  {
+        isLoading = false
         if let property = HWRealmManager.shared.fetchProperty(forID: id), !property.isInvalidated {
-            
-            return PropertyScreenResponse(property: property, error: nil)
-            
+            isLoading = false
+            self.property = PropertyScreenResponse(property: property, error: nil)
+            images = Array(property.images)
         } else {
             
             // Make an asynchronous network request to get Property.
@@ -67,11 +72,16 @@ class PropertiesViewModel: ObservableObject {
             switch result {
             case .failure(let error):
                 // If there is a network error, return a PropertyScreenResponse with the error.
-                return PropertyScreenResponse(property: nil, error: error)
+                isLoading = false
+                property = PropertyScreenResponse(property: nil, error: error)
                 
             case .success(let property):
                 // If the network request is successful, return a PropertyScreenResponse with the fetched properties.
-                return PropertyScreenResponse(property: property, error: nil)
+                isLoading = false
+                self.property =  PropertyScreenResponse(property: property, error: nil)
+                if let propertyimages = property?.images {
+                    images = Array(propertyimages)
+                }
             }
         }
  

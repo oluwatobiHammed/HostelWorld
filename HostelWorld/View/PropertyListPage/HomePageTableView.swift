@@ -9,64 +9,80 @@ import SwiftUI
 
 struct HomePageTableView: View {
     
-    @ObservedObject private var viewModel =  PropertiesViewModel()
+    @StateObject private var viewModel =  PropertiesViewModel()
     @State private var isRefreshing: Bool = false
     @State private var showAlert: Bool = false
+    @State private var showErrorMessage: Bool = false
     @State private var errorMessage: String = ""
     
     var body: some View {
         
-        PropertyListScrollView(properties: viewModel.properties?.properties ?? [])
-            .scrollIndicators(.hidden)
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: CityProperty.self) { property in
-                PropertyDetailScreen(id: property.id)
-            }
-            .alert("Retry", isPresented: $showAlert) {
-                Button(action: {
-                    withAnimation {
+        ZStack {
+            PropertyListScrollView(properties: viewModel.properties?.properties ?? [])
+                .scrollIndicators(.hidden)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationDestination(for: CityProperty.self) { property in
+                    PropertyDetailScreen(id: property.id)
+                }
+                .alert("Something happened", isPresented: $showAlert) {
+                    Button("Retry") {
+                        // Handle OK button action
+                        showAlert = false
                         viewModel.memoryCleanUp()
                         loadPropertyList()
                     }
-                }) {
-                   
-                       
+                    
+                    Button("ok") {
+                        // Handle OK button action
+                        showAlert = false
+                        
+                    }
                 }
-            } message: {
-              Text(errorMessage)
-            }
-            .navigationBarItems(trailing:
-                          Button(action: {
-                              // Reload the data
+                   message: {
+                    Text(errorMessage)
+                  }
+
+                .navigationBarItems(trailing:
+                              Button(action: {
+                                  // Reload the data
+                                  self.reload()
+                              }) {
+                                  Image(systemName: "arrow.clockwise.circle")
+                                      .imageScale(.large)
+                              }
+                          )
+                          .pullToRefresh(isRefreshing: $isRefreshing) {
                               self.reload()
-                          }) {
-                              Image(systemName: "arrow.clockwise.circle")
-                                  .imageScale(.large)
                           }
-                      )
-                      .pullToRefresh(isRefreshing: $isRefreshing) {
-                          self.reload()
-                      }
-            .padding()
-            .padding(.top, -15)
-        .onLoad {
-            viewModel.memoryCleanUp()
-            loadPropertyList()
+                .padding()
+                .padding(.top, -15)
+            .onLoad {
+                viewModel.memoryCleanUp()
+                loadPropertyList()
+                
+            }
             
+            if (viewModel.properties?.properties.isEmpty ?? false), errorMessage.isEmpty {
+                Spacer()
+                HStack {
+                    let errorMessage = """
+                                     Oops!!
+                                     No available property!
+                                     Be sure to check back soon.
+                                     """
+                    Text(errorMessage)
+                        .multilineTextAlignment(.center) // You can adjust the alignment as needed
+                                    .padding()
+                }
+                Spacer()
+            }
         }
-        if (viewModel.properties?.properties.isEmpty ?? false), !showAlert {
-            let errorMessage = """
-                             Oops
-                             No available property!
-                             Be sure to check back soon.
-                             """
-            Text(errorMessage)
-        }
+
     }
     
     private func loadPropertyList() {
         Task {
-            viewModel.properties = await viewModel.getProperties()
+             await viewModel.getProperties()
             viewModel.isLoading = !(viewModel.properties?.properties.isEmpty ?? false)
             showAlert = viewModel.properties?.error != nil
             errorMessage = viewModel.properties?.error?.localizedDescription ?? ""
