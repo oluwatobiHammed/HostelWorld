@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PropertyListScrollView: View {
-    @ObservedObject private var viewModel =  PropertiesViewModel()
+    
+    @StateObject private var viewModel =  PropertiesViewModel()
+    
     let properties: [CityProperty]
     var body: some View {
         ScrollView {
@@ -35,6 +37,6 @@ struct PropertyListScrollView: View {
     }
 }
 
-//#Preview {
-//    PropertyListScrollView()
-//}
+#Preview {
+    PropertyListScrollView(properties: [])
+}

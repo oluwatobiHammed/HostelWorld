@@ -83,7 +83,6 @@ struct HomePageTableView: View {
     private func loadPropertyList() {
         Task {
              await viewModel.getProperties()
-            viewModel.isLoading = !(viewModel.properties?.properties.isEmpty ?? false)
             showAlert = viewModel.properties?.error != nil
             errorMessage = viewModel.properties?.error?.localizedDescription ?? ""
         }
@@ -98,6 +97,6 @@ struct HomePageTableView: View {
     }
 }
 
-//#Preview {
-//    HomePageTableView()
-//}
+#Preview {
+    HomePageTableView()
+}
