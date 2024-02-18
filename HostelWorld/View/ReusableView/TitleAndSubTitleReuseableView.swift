@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+/*
+   The `TitleAndSubTitleReuseableView` struct is a SwiftUI view designed to display a title with customizable font size, minimum scale factor, line limit, and top padding.
+
+   - Properties:
+     - title: String: The title text to be displayed.
+     - fontSize: Font?: The font size of the title text, with a default value of EffraHeavyRegular 20.
+     - minimumScaleFactor: CGFloat: The minimum scale factor for the title text when scaling down.
+     - lineLimit: Int?: The maximum number of lines for the title text. If nil, there is no limit.
+     - topPadding: CGFloat: The top padding to adjust the vertical position of the view.
+
+   - Body:
+     - Utilizes HStack to horizontally arrange the title text with proper styling.
+       - Applies the specified font size, minimum scale factor, line limit, and top padding.
+*/
+
+
 struct TitleAndSubTitleReuseableView: View {
     let title: String
     let fontSize: Font?
