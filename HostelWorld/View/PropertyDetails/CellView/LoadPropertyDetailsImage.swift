@@ -10,13 +10,17 @@ import SwiftUI
 struct LoadPropertyDetailsImage: View {
     
     let images: [PropertyImage]
-    
+    let width: CGFloat
+    let height: CGFloat
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
                 ForEach(images.indices, id: \.self) { index in
-                    
-                    LoadImages(width: UIScreen.main.bounds.width - 70, height: 100, urlString: images[index].prefix+images[index].suffix)
+                    if !images.contains(where: {$0.isInvalidated}) {
+                        LoadImages(width: width, height: height, urlString: images[index].prefix+images[index].suffix, isCorner: index == 0)
+                           // .frame(width: width, height: height)
+                            .padding(.leading, index == 0 ? 15 : 0)
+                    }
                     
                 }
                 

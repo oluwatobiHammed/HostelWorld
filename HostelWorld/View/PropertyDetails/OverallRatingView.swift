@@ -14,7 +14,7 @@ struct OverallRatingView: View {
     var body: some View {
         HStack {
             
-            TitleView(title: tile, fontSize: Font(kFont.EffraHeavyRegular.of(size: 20)), minimumScaleFactor: 2)
+            TitleAndSubTitleReuseableView(title: tile, fontSize: Font(kFont.EffraHeavyRegular.of(size: 20)), minimumScaleFactor: 2)
             .padding(.top, 20)
             .padding(.leading, 0)
             Spacer()

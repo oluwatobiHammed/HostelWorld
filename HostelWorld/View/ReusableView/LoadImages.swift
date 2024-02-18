@@ -11,6 +11,13 @@ struct LoadImages: View {
     let width: CGFloat
     let height: CGFloat
     let urlString: String
+    let isCorner: Bool
+    init(width: CGFloat, height: CGFloat, urlString: String, isCorner: Bool = false) {
+        self.width = width
+        self.height = height
+        self.urlString = urlString
+        self.isCorner = isCorner
+    }
     var body: some View {
         
         AsyncImage(url: URL(string: urlString)) { phase in
@@ -18,6 +25,7 @@ struct LoadImages: View {
             case .success(let image):
                 image
                     .resizable()
+                    .cornerRadius(isCorner ? 8 : 0, corners: [.topLeft, .bottomLeft])
                     .aspectRatio(contentMode: .fill)
                     .frame(width: width, height: height) // Adjust the frame as needed
                 
@@ -26,17 +34,16 @@ struct LoadImages: View {
                 Image(.photo)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: width, height: height)
+                    //.frame(width: width, height: height)
                     .background(Color.clear)
                     .padding()
                 
             case .empty:
                 // Placeholder view while loading
-               // ProgressView()
                 Image(.photo)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: width, height: height)
+                    //.frame(width: width, height: height)
                     .background(Color.clear)
                     .padding()
             @unknown default:

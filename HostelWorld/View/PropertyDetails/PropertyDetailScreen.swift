@@ -14,6 +14,7 @@ struct PropertyDetailScreen: View {
     @State private var paymentOption: [String] = []
     @State private var showAlert: Bool = false
     @State private var errorMessage: String = ""
+    @State private var notAvailableMessage: String = ""
     @State private var isViewVisible = false
     
     var body: some View {
@@ -21,31 +22,41 @@ struct PropertyDetailScreen: View {
             ScrollView {
                 VStack(spacing: 0) {
                     Spacer().frame(height: 0)
-                    
-                    LoadPropertyDetailsImage(images: viewModel.images)
+                    LoadPropertyDetailsImage(images: viewModel.images, width: UIScreen.main.bounds.width - 60, height: 150)
                         .redactShimmer(condition: viewModel.isLoading)
-                        .frame(width: UIScreen.main.bounds.width, height: 250)
+                        .frame(width: UIScreen.main.bounds.width, height: 280)
                     
-                    TitleView(title: viewModel.property?.property?.type ?? "", fontSize: Font(kFont.EffraRegular.of(size: 11)))
+                    TitleAndSubTitleReuseableView(title: viewModel.property?.property?.type ?? "", fontSize: Font(kFont.EffraRegular.of(size: 11)))
                         .padding(.top, 10)
-                    OverallRatingView(overallRating: viewModel.property?.property?.rating?.overall.value, tile: viewModel.property?.property?.name ?? "")
+                    OverallRatingView(overallRating: viewModel.property?.property?.rating?.overall.value, tile: viewModel.property?.property?.name ?? "0.0")
+                    Divider()
+                        .frame(height: 0.3)
+                        .background(Color.primary)
+                        .padding(.leading, 15)
+                        .padding(.trailing, 25)
+                        .padding(.top, 10)
+                        .padding(.bottom, 20)
+                    if let direction = viewModel.property?.property?.directions, !direction.isEmpty {
+                        PropertyDetailsDirectionsView(direction: direction)
+                    }
                     
-                    TitleView(title: "Directions")
+                    if let description = viewModel.property?.property?.propertyDescription, !description.isEmpty {
+                        PropertyDetailsDescriptionView(description: description)
+                    }
                     
-                    TitleView(title: viewModel.property?.property?.directions ?? "", fontSize: Font(kFont.EffraRegular.of(size: 14)), minimumScaleFactor: 0.3, lineLimit: nil)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.top, -5)
-                    
-                    
-                    TitleView(title: "Description")
-                    DescriptionView(propertyDescription: viewModel.property?.property?.propertyDescription ?? "")
-                    
-                    TitleView(title: "Location")
+                    TitleAndSubTitleReuseableView(title: "Location")
                         .padding(.top, 5)
                     AddressView(address: "\(viewModel.property?.property?.address1 ?? ""), \(viewModel.property?.property?.city?.name ?? ""),  \(viewModel.property?.property?.city?.country ?? "") ")
                     
+                    Divider()
+                        .frame(height: 0.3)
+                        .background(Color.primary)
+                        .padding(.leading, 15)
+                        .padding(.trailing, 25)
+                        .padding(.top, 10)
+                        .padding(.bottom, 20)
                     
-                    TitleView(title: "Payment Method")
+                    TitleAndSubTitleReuseableView(title: "Payment Method")
                         .padding(.top, 5)
                     PaymentMethodScrollView(paymentMethod: paymentOption)
                         .padding(.top, -15)
@@ -75,11 +86,7 @@ struct PropertyDetailScreen: View {
             if !isViewVisible, !viewModel.isLoading {
                 Spacer()
                 HStack {
-                    let errorMessage = """
-                                     Oops!!
-                                     Property details is Not available !
-                                     """
-                    Text(errorMessage)
+                    Text(notAvailableMessage)
                         .multilineTextAlignment(.center) // You can adjust the alignment as needed
                         .padding()
                 }
@@ -100,6 +107,10 @@ struct PropertyDetailScreen: View {
             isViewVisible = viewModel.properties?.error == nil
             showAlert = viewModel.properties?.error != nil || viewModel.property?.property == nil
             errorMessage = viewModel.property?.error?.localizedDescription ?? ""
+            notAvailableMessage = """
+                                     Oops!!
+                                     Property details is Not available !
+                                     """
         }
     }
 }

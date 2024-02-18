@@ -19,7 +19,7 @@
 		314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */; };
 		314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */; };
 		3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193598C2B80AE1200229DE5 /* IndexPage.swift */; };
-		319359942B80B3D800229DE5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359932B80B3D800229DE5 /* TitleView.swift */; };
+		319359942B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */; };
 		319359962B80C01200229DE5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359952B80C01200229DE5 /* AddressView.swift */; };
 		319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359972B80C0B100229DE5 /* DescriptionView.swift */; };
 		3193599A2B80C18400229DE5 /* OverallRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359992B80C18400229DE5 /* OverallRatingView.swift */; };
@@ -84,6 +84,11 @@
 		31BE93902B7F894C003981E2 /* Univers-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93712B7F894C003981E2 /* Univers-Black.ttf */; };
 		31BE93912B7F894C003981E2 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93732B7F894C003981E2 /* Montserrat-Bold.ttf */; };
 		31BE93922B7F894C003981E2 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31BE93742B7F894C003981E2 /* Montserrat-Regular.ttf */; };
+		31EB41DE2B8230B900EE765D /* PropertyDetailsDirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB41DD2B8230B900EE765D /* PropertyDetailsDirectionsView.swift */; };
+		31EB41E02B8231BB00EE765D /* PropertyDetailsDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB41DF2B8231BB00EE765D /* PropertyDetailsDescriptionView.swift */; };
+		31EB41E22B82352500EE765D /* PartialRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB41E12B82352500EE765D /* PartialRoundedCorners.swift */; };
+		31EB41E42B82354400EE765D /* PartiallyRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB41E32B82354400EE765D /* PartiallyRoundedRectangle.swift */; };
+		31EB41E62B82358400EE765D /* View+PartialRoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EB41E52B82358400EE765D /* View+PartialRoundedCorners.swift */; };
 		31FE20232B7E9A8F000F167E /* HostelWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */; };
 		31FE20252B7E9A8F000F167E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20242B7E9A8F000F167E /* ContentView.swift */; };
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
@@ -123,7 +128,7 @@
 		314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethods.swift; sourceTree = "<group>"; };
 		314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScrollView.swift; sourceTree = "<group>"; };
 		3193598C2B80AE1200229DE5 /* IndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPage.swift; sourceTree = "<group>"; };
-		319359932B80B3D800229DE5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSubTitleReuseableView.swift; sourceTree = "<group>"; };
 		319359952B80C01200229DE5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		319359972B80C0B100229DE5 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		319359992B80C18400229DE5 /* OverallRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallRatingView.swift; sourceTree = "<group>"; };
@@ -188,6 +193,11 @@
 		31BE93732B7F894C003981E2 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		31BE93742B7F894C003981E2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		31BE93932B7F9A26003981E2 /* Shrikhand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shrikhand-Regular.ttf"; sourceTree = "<group>"; };
+		31EB41DD2B8230B900EE765D /* PropertyDetailsDirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsDirectionsView.swift; sourceTree = "<group>"; };
+		31EB41DF2B8231BB00EE765D /* PropertyDetailsDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsDescriptionView.swift; sourceTree = "<group>"; };
+		31EB41E12B82352500EE765D /* PartialRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialRoundedCorners.swift; sourceTree = "<group>"; };
+		31EB41E32B82354400EE765D /* PartiallyRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiallyRoundedRectangle.swift; sourceTree = "<group>"; };
+		31EB41E52B82358400EE765D /* View+PartialRoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PartialRoundedCorners.swift"; sourceTree = "<group>"; };
 		31FE201F2B7E9A8F000F167E /* HostelWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostelWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FE20222B7E9A8F000F167E /* HostelWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldApp.swift; sourceTree = "<group>"; };
 		31FE20242B7E9A8F000F167E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -232,7 +242,9 @@
 			children = (
 				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
 				31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */,
-				319359932B80B3D800229DE5 /* TitleView.swift */,
+				319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */,
+				31EB41E12B82352500EE765D /* PartialRoundedCorners.swift */,
+				31EB41E32B82354400EE765D /* PartiallyRoundedRectangle.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -273,6 +285,8 @@
 				319359952B80C01200229DE5 /* AddressView.swift */,
 				319359972B80C0B100229DE5 /* DescriptionView.swift */,
 				319359992B80C18400229DE5 /* OverallRatingView.swift */,
+				31EB41DD2B8230B900EE765D /* PropertyDetailsDirectionsView.swift */,
+				31EB41DF2B8231BB00EE765D /* PropertyDetailsDescriptionView.swift */,
 			);
 			path = PropertyDetails;
 			sourceTree = "<group>";
@@ -604,6 +618,7 @@
 			children = (
 				31BE93032B7E9CD3003981E2 /* APIConstants.swift */,
 				31BE934C2B7F88E4003981E2 /* FontConstants.swift */,
+				31EB41E52B82358400EE765D /* View+PartialRoundedCorners.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -786,6 +801,7 @@
 				31BE93332B7EB0E5003981E2 /* Decodable+Extension.swift in Sources */,
 				31BE931F2B7EA952003981E2 /* NetworkManagerProtocol.swift in Sources */,
 				31BE93152B7EA118003981E2 /* ParameterEncoding.swift in Sources */,
+				31EB41E02B8231BB00EE765D /* PropertyDetailsDescriptionView.swift in Sources */,
 				314C3EE62B7FE380009748B8 /* LoadPropertyDetailsImage.swift in Sources */,
 				31BE93382B7EB3E9003981E2 /* CheckIn.swift in Sources */,
 				31BE931D2B7EA93A003981E2 /* NetworkManager.swift in Sources */,
@@ -808,17 +824,21 @@
 				310798182B8104C10000CCDA /* RedactedShimmer.swift in Sources */,
 				314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */,
 				31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */,
+				31EB41E22B82352500EE765D /* PartialRoundedCorners.swift in Sources */,
 				31BE933C2B7EB7A0003981E2 /* Rating.swift in Sources */,
 				31BE934B2B7F6510003981E2 /* VerticalImageView.swift in Sources */,
 				31BE93452B7F543C003981E2 /* PropertiesCellView.swift in Sources */,
+				31EB41E42B82354400EE765D /* PartiallyRoundedRectangle.swift in Sources */,
 				31BE934D2B7F88E4003981E2 /* FontConstants.swift in Sources */,
 				31BE932F2B7EACD2003981E2 /* OverallRating.swift in Sources */,
+				31EB41DE2B8230B900EE765D /* PropertyDetailsDirectionsView.swift in Sources */,
 				319359962B80C01200229DE5 /* AddressView.swift in Sources */,
-				319359942B80B3D800229DE5 /* TitleView.swift in Sources */,
+				319359942B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift in Sources */,
 				314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */,
 				314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */,
 				31BE933F2B7EBA31003981E2 /* PropertiesViewModel.swift in Sources */,
 				31BE93132B7EA0E9003981E2 /* URLParameterEncoding.swift in Sources */,
+				31EB41E62B82358400EE765D /* View+PartialRoundedCorners.swift in Sources */,
 				31BE93072B7E9F51003981E2 /* HWEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

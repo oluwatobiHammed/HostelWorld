@@ -18,7 +18,7 @@ struct DescriptionView: View {
             
             // Content that can be collapsed or expanded
             Text(propertyDescription)
-                .font(Font(kFont.EffraRegular.of(size: 14)))
+                .font(Font(kFont.EffraRegular.of(size: 16)))
                 .multilineTextAlignment(.leading)
                 .padding()
                 .minimumScaleFactor(isExpanded ? 0.3 : 0)

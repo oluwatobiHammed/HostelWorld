@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleView: View {
+struct TitleAndSubTitleReuseableView: View {
     let title: String
     let fontSize: Font?
     let minimumScaleFactor: CGFloat
@@ -37,5 +37,5 @@ struct TitleView: View {
 }
 
 #Preview {
-    TitleView(title: "sample")
+    TitleAndSubTitleReuseableView(title: "sample")
 }
