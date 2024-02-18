@@ -56,7 +56,6 @@ struct HomePageTableView: View {
             .pullToRefresh(isRefreshing: $isRefreshing) {
                 self.reload()
             }
-            .opacity((viewModel.properties?.properties.isEmpty ?? true) ? 0.0 : 1.0)
             .padding()
             .padding(.top, -15)
             .onLoad {

@@ -35,6 +35,6 @@ extension View {
     }
 }
 
-#Preview {
-    PullToRefresh(isRefreshing: <#Binding<Bool>#>, action: <#() -> Void#>)
-}
+//#Preview {
+//    PullToRefresh(isRefreshing: <#Binding<Bool>#>, action: <#() -> Void#>)
+//}
