@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+
+/*
+   The `DescriptionView` struct is a SwiftUI view designed to display property descriptions with an option to expand or collapse the content.
+
+   - Properties:
+     - propertyDescription: String: The description to be displayed.
+     - isExpanded: Bool: A state variable to determine whether the description is expanded or collapsed.
+     - isLoading: Bool: Indicates whether content is currently loading.
+   
+   - Body:
+     - Utilizes two HStacks to structure the view:
+       - The first HStack displays the property description with adjustable text alignment, scaling, and line limit.
+       - The second HStack contains a button allowing the user to toggle the description state.
+         - The button text changes based on the expanded or collapsed state.
+         - An arrow icon indicates the direction of the toggle.
+     - Appropriate padding is applied for layout adjustments.
+*/
+
 struct DescriptionView: View {
     
     let propertyDescription: String

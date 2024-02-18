@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+/*
+   The `PropertyDetailsDirectionsView` struct is a SwiftUI view that presents property directions.
+
+   - Properties:
+     - direction: String: The directions associated with the property.
+   
+   - Body:
+     - Displays the title "Directions" using a `TitleAndSubTitleReuseableView`.
+     - Presents the actual direction content using another `TitleAndSubTitleReuseableView` with specific font size, scaling, and alignment settings.
+       - Adjusts frame maxWidth and alignment for better visual appearance.
+     - Includes a divider below the direction content for visual separation.
+     - Applies appropriate padding for layout adjustments.
+*/
+
 struct PropertyDetailsDirectionsView: View {
     let direction: String
     var body: some View {

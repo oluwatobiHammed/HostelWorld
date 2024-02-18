@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+/*
+   The `OverallRatingView` struct is a SwiftUI view designed to display an overall rating for a property.
+
+   - Properties:
+     - overallRating: Int?: The numeric rating value (if available).
+     - tile: String: A title or label associated with the rating.
+   
+   - Body:
+     - Utilizes HStack to arrange two components:
+       - A customized `TitleAndSubTitleReuseableView` displaying the associated title with a specified font size.
+       - A sub-HStack displaying a star icon filled with yellow color and the numeric rating.
+         - The rating is formatted and displayed with a specified font size, alignment, scaling, and line limit.
+     - Adjusts padding for proper layout.
+*/
+
 struct OverallRatingView: View {
     let overallRating: Int?
     let tile: String
