@@ -14,12 +14,12 @@ struct HomePageTableView: View {
     @State private var showAlert: Bool = false
     @State private var showErrorMessage: Bool = false
     @State private var errorMessage: String = ""
-    @State private var sampleProperties: [CityProperty] = []
+    
     var body: some View {
         
         ZStack {
             
-            PropertyListScrollView(isLoading: viewModel.isLoading, properties: viewModel.properties?.properties ?? sampleProperties)
+            PropertyListScrollView(isLoading: viewModel.isLoading, properties: viewModel.properties?.properties ?? [])
                     .scrollIndicators(.hidden)
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationDestination(for: CityProperty.self) { property in
@@ -56,6 +56,7 @@ struct HomePageTableView: View {
             .pullToRefresh(isRefreshing: $isRefreshing) {
                 self.reload()
             }
+            .opacity((viewModel.properties?.properties.isEmpty ?? true) ? 0.0 : 1.0)
             .padding()
             .padding(.top, -15)
             .onLoad {
@@ -99,11 +100,6 @@ struct HomePageTableView: View {
     }
     
     func reload() {
-        
-        let property = CityProperty()
-        for _ in 0...5 {
-            sampleProperties.append(property)
-        }
         
         viewModel.memoryCleanUp()
         loadPropertyList()

@@ -66,7 +66,6 @@ struct PropertyDetailScreen: View {
                     Spacer()
                 }
             }
-            .opacity(isViewVisible ? 1.0 : 0)
             .scrollIndicators(.hidden)
             .alert("Something happened", isPresented: $showAlert) {
                 Button("ok") {
