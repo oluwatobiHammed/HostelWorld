@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+/*
+   The `PropertiesCellView` struct is a SwiftUI view that represents a cell for displaying detailed information about a city property.
+
+   - Properties:
+     - property: CityProperty: The data model representing the property details.
+   
+   - Body:
+     - Utilizes a ZStack with a RoundedRectangle to create a styled and bordered container for the property information.
+     - Contains a VerticalImageView to display a set of vertical images associated with the property.
+     - Includes a VStack with various HStacks to organize and display property name, overall rating, property type, and city.
+     - Applies appropriate styling, font sizes, and padding for a visually appealing layout.
+     - Adjusts corner radius, stroke color, and other visual elements for customization.
+*/
+
 struct PropertiesCellView: View {
     let property: CityProperty
     var body: some View {
