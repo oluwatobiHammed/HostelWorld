@@ -45,23 +45,26 @@ struct PropertyDetailScreen: View {
                     if let description = viewModel.property?.property?.propertyDescription, !description.isEmpty {
                         PropertyDetailsDescriptionView(description: description, isLoading: viewModel.isLoading)
                     }
+                    if let property = viewModel.property?.property, !property.isInvalidated, let address1 = viewModel.property?.property?.address1, let name = property.city?.name, let country = property.city?.country {
+                        TitleAndSubTitleReuseableView(title: "Location")
+                            .padding(.top, 5)
+                        AddressView(address: "\(address1), \(name),  \(country)")
+                    }
                     
-                    TitleAndSubTitleReuseableView(title: "Location")
-                        .padding(.top, 5)
-                    AddressView(address: "\(viewModel.property?.property?.address1 ?? ""), \(viewModel.property?.property?.city?.name ?? ""),  \(viewModel.property?.property?.city?.country ?? "") ")
-                    
-                    Divider()
-                        .frame(height: 0.3)
-                        .background(Color.primary)
-                        .padding(.leading, 15)
-                        .padding(.trailing, 25)
-                        .padding(.top, 10)
-                        .padding(.bottom, 20)
-                    
-                    TitleAndSubTitleReuseableView(title: "Payment Method")
-                        .padding(.top, 5)
-                    PaymentMethodScrollView(paymentMethod: paymentOption)
-                        .padding(.top, -15)
+                    if !paymentOption.isEmpty {
+                        Divider()
+                            .frame(height: 0.3)
+                            .background(Color.primary)
+                            .padding(.leading, 15)
+                            .padding(.trailing, 25)
+                            .padding(.top, 10)
+                            .padding(.bottom, 20)
+                        
+                        TitleAndSubTitleReuseableView(title: "Payment Method")
+                            .padding(.top, 5)
+                        PaymentMethodScrollView(paymentMethod: paymentOption)
+                            .padding(.top, -15)
+                    }
                     
                     Spacer()
                 }
@@ -116,7 +119,7 @@ struct PropertyDetailScreen: View {
     }
 }
 
-#Preview {
-    PropertyDetailScreen(id: "")
-}
+//#Preview {
+//    PropertyDetailScreen(id: "")
+//}
 
