@@ -18,12 +18,14 @@ struct PropertyDetailScreen: View {
     @State private var isViewVisible = false
     
     var body: some View {
+        
         ZStack {
+            
             ScrollView {
+                
                 VStack(spacing: 0) {
                     Spacer().frame(height: 0)
                     LoadPropertyDetailsImage(images: viewModel.images, width: UIScreen.main.bounds.width - 60, height: 150)
-                        .redactShimmer(condition: viewModel.isLoading)
                         .frame(width: UIScreen.main.bounds.width, height: 280)
                     
                     TitleAndSubTitleReuseableView(title: viewModel.property?.property?.type ?? "", fontSize: Font(kFont.EffraRegular.of(size: 11)))
@@ -41,7 +43,7 @@ struct PropertyDetailScreen: View {
                     }
                     
                     if let description = viewModel.property?.property?.propertyDescription, !description.isEmpty {
-                        PropertyDetailsDescriptionView(description: description)
+                        PropertyDetailsDescriptionView(description: description, isLoading: viewModel.isLoading)
                     }
                     
                     TitleAndSubTitleReuseableView(title: "Location")
@@ -93,14 +95,14 @@ struct PropertyDetailScreen: View {
                 Spacer()
             }
         }
-        
+        .redacted(reason: viewModel.isLoading ? .placeholder : [])
         
     }
     
     private func getProperty() {
         Task {
-             await viewModel.getProperty(id: id)
-          
+            await viewModel.getProperty(id: id)
+            
             if let paymentOption = viewModel.property?.property?.paymentMethods {
                 self.paymentOption = Array(paymentOption)
             }

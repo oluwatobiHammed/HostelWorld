@@ -10,9 +10,8 @@ import SwiftUI
 struct DescriptionView: View {
     
     let propertyDescription: String
-    
     @State private var isExpanded = false
-    
+    let isLoading: Bool
     var body: some View {
         HStack {
             
@@ -44,6 +43,7 @@ struct DescriptionView: View {
                     .padding(.trailing, 12)
                    
             }
+            .disabled(isLoading)
             
         }
         .padding(.top, -14)
@@ -51,5 +51,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-    DescriptionView(propertyDescription: "")
+    DescriptionView(propertyDescription: "", isLoading: false)
 }

@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PropertyDetailsDescriptionView: View {
     let description: String
+    let isLoading: Bool
     var body: some View {
         TitleAndSubTitleReuseableView(title: "Description")
-        DescriptionView(propertyDescription: description)
+        DescriptionView(propertyDescription: description, isLoading: isLoading)
         
         Divider()
             .frame(height: 0.3)
@@ -24,5 +25,5 @@ struct PropertyDetailsDescriptionView: View {
 }
 
 #Preview {
-    PropertyDetailsDescriptionView(description: "")
+    PropertyDetailsDescriptionView(description: "", isLoading: false)
 }

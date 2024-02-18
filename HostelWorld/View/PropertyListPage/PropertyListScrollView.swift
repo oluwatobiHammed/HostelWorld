@@ -10,7 +10,7 @@ import SwiftUI
 struct PropertyListScrollView: View {
     
     @StateObject private var viewModel =  PropertiesViewModel()
-    
+    let isLoading: Bool
     let properties: [CityProperty]
     var body: some View {
         ScrollView {
@@ -30,9 +30,10 @@ struct PropertyListScrollView: View {
                         
                     }
                     .buttonStyle(PlainButtonStyle()) // Use PlainButtonStyle to remove the default navigation color
+                    .disabled(isLoading)
                     .accentColor(nil) // Remove selection style
                 }
-                .redactShimmer(condition: viewModel.isLoading)
+                .redacted(reason: isLoading ? .placeholder : [])
             }
             
         }
@@ -40,6 +41,6 @@ struct PropertyListScrollView: View {
     }
 }
 
-#Preview {
-    PropertyListScrollView(properties: [])
-}
+//#Preview {
+//    PropertyListScrollView(properties: [])
+//}

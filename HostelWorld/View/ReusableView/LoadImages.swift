@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoadImages: View {
+    
+    
     let width: CGFloat
     let height: CGFloat
     let urlString: String
@@ -34,7 +36,7 @@ struct LoadImages: View {
                 Image(.photo)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    //.frame(width: width, height: height)
+                    .frame(width: width, height: height)
                     .background(Color.clear)
                     .padding()
                 
@@ -43,7 +45,7 @@ struct LoadImages: View {
                 Image(.photo)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    //.frame(width: width, height: height)
+                    .frame(width: width, height: height)
                     .background(Color.clear)
                     .padding()
             @unknown default:

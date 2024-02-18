@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@MainActor
 // ViewModel class responsible for managing properties data and handling network interactions.
 class PropertiesViewModel: ObservableObject {
     
@@ -29,13 +29,14 @@ class PropertiesViewModel: ObservableObject {
     }
     
     // Asynchronously fetch city properties and update the properties variable.
-   @MainActor func getProperties() async   {
-       isLoading = true
+    func getProperties() async   {
+       
         if let cityProperty = HWRealmManager.shared.cityProperties, !cityProperty.isInvalidated, !cityProperty.properties.isEmpty {
             let result = Array(cityProperty.properties)
             properties = PropertiesResponse(properties: result, error: nil)
-            isLoading = false
+            
         } else {
+            isLoading = true
             // Make an asynchronous network request to get city properties.
             let result = await network.getCityProperties()
             
@@ -47,25 +48,28 @@ class PropertiesViewModel: ObservableObject {
                 
             case .success(let properties):
                 // If the network request is successful, return a PropertiesResponse with the fetched properties.
-                guard let result = properties?.properties else {return}
-                let propertyList = Array(result)
+                guard let properties, !properties.isInvalidated, !properties.properties.contains(where: {$0.isInvalidated}) else {return}
+                let propertyList = Array(properties.properties)
                 self.properties = PropertiesResponse(properties: propertyList, error: nil)
-               
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {[weak self] in
+                    self?.isLoading = false
+                })
             }
-            isLoading = false
+            
         }
         
     }
     
     // Asynchronously fetch city properties and update the properties variable.
-    @MainActor func getProperty(id: String) async  {
-        isLoading = false
+    func getProperty(id: String) async  {
+        isLoading = true
         if let property = HWRealmManager.shared.fetchProperty(forID: id), !property.isInvalidated {
             isLoading = false
             self.property = PropertyScreenResponse(property: property, error: nil)
             images = Array(property.images)
         } else {
-            
+           
             // Make an asynchronous network request to get Property.
             let result = await network.getProperty(id: id)
             
@@ -80,16 +84,20 @@ class PropertiesViewModel: ObservableObject {
                 // If the network request is successful, return a PropertyScreenResponse with the fetched properties.
                 
                 self.property =  PropertyScreenResponse(property: property, error: nil)
-                if let propertyimages = property?.images {
-                    images = Array(propertyimages)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: { [weak self] in
+                    self?.isLoading = false
+                })
+                
+                if let property, !property.isInvalidated, !property.images.contains(where: {$0.isInvalidated}) {
+                    images = Array(property.images)
                 }
             }
-            isLoading = false
+            
         }
  
      }
     
-    @MainActor func memoryCleanUp() {
+    func memoryCleanUp() {
         HWRealmManager.shared.clearObject(type: CityProperties.self)
         HWRealmManager.shared.clearObject(type: SingleProperty.self)
     }
