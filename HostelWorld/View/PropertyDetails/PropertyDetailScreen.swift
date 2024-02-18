@@ -25,7 +25,7 @@ struct PropertyDetailScreen: View {
                 
                 VStack(spacing: 0) {
                     Spacer().frame(height: 0)
-                    LoadPropertyDetailsImage(images: viewModel.images, width: UIScreen.main.bounds.width - 60, height: 150)
+                    LoadPropertyDetailsImage(images: viewModel.images, width: UIScreen.main.bounds.width - 30, height: 120)
                         .frame(width: UIScreen.main.bounds.width, height: 280)
                     
                     TitleAndSubTitleReuseableView(title: viewModel.property?.property?.type ?? "", fontSize: Font(kFont.EffraRegular.of(size: 11)))
@@ -117,7 +117,7 @@ struct PropertyDetailScreen: View {
     }
 }
 
-//#Preview {
-//    PropertyDetailScreen(id: "")
-//}
+#Preview {
+    PropertyDetailScreen(id: "")
+}
 

@@ -18,7 +18,6 @@ struct LoadPropertyDetailsImage: View {
                 ForEach(images.indices, id: \.self) { index in
                     if !images.contains(where: {$0.isInvalidated}) {
                         LoadImages(width: width, height: height, urlString: images[index].prefix+images[index].suffix, isCorner: index == 0)
-                           // .frame(width: width, height: height)
                             .padding(.leading, index == 0 ? 15 : 0)
                     }
                     
