@@ -36,7 +36,7 @@ struct DescriptionView: View {
                 }
             }) {
                
-                Text(self.isExpanded ? "Collapse" : "Read more")
+                Text(self.isExpanded ? "Done" : "Read more")
                     .padding(.all, 0)
                     .padding(.trailing, -3)
                 Image(systemName: "chevron.forward")
