@@ -64,7 +64,7 @@ Examples
 City Properties List View
 swift
 Copy code
-struct YourPropertiesView: View {
+struct PropertyListScrollView: View {
     @StateObject private var viewModel = PropertiesViewModel()
     let yourPropertiesArray: [CityProperty]
 
@@ -77,8 +77,8 @@ struct YourPropertiesView: View {
 Property Detail View
 swift
 Copy code
-struct YourDetailView: View {
-    @ObservedObject private var viewModel = PropertiesViewModel()
+struct PropertyDetailScreen: View {
+    @StateObject private var viewModel = PropertiesViewModel()
     let yourPropertyID: String
 
     var body: some View {
