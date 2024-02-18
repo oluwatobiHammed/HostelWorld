@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PropertyDetailScreen: View {
     let id: String
-    @ObservedObject private var viewModel =  PropertiesViewModel()
+    @StateObject private var viewModel =  PropertiesViewModel()
     @State private var images: [PropertyImage] = []
     @State private var paymentOption: [String] = []
     @State private var showAlert: Bool = false
@@ -70,27 +70,9 @@ struct PropertyDetailScreen: View {
         }
             
         .navigationTitle(viewModel.property?.property?.name ?? "")
-        //.navigationBarTitle(viewModel.property?.property?.name ?? "", displayMode: .inline)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-            // Add the toolbar
-                 .toolbar {
-                     // Specify the placement as navigationBarLeading
-                     ToolbarItem(placement: .navigationBarLeading) {
-                         // Content for the leading side of the navigation bar
-                         // This could be buttons, images, etc.
-                         // Example:
-//                         Button("Back") {
-//                             // Action when the button is tapped
-//                         }
-                         BackButtonWithTransition(label: viewModel.property?.property?.city?.country ?? "")
-                        // MyBackButton(label: viewModel.property?.property?.city?.country ?? "")
-                     }
-
-                     // You can add more ToolbarItem for other placements if needed
-                 }
             
-            if !isViewVisible {
+            if !isViewVisible, !viewModel.isLoading {
                 Spacer()
                 HStack {
                     let errorMessage = """
@@ -122,7 +104,7 @@ struct PropertyDetailScreen: View {
     }
 }
 
-#Preview {
-    PropertyDetailScreen(id: "")
-}
+//#Preview {
+//    PropertyDetailScreen(id: "")
+//}
 

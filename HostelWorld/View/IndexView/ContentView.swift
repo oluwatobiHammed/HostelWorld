@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @State private var stackPath = NavigationPath()
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $stackPath) {
             // Your main content goes here
             HomePageTableView()
             

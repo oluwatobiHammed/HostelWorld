@@ -44,14 +44,15 @@ class PropertiesViewModel: ObservableObject {
             case .failure(let error):
                 // If there is a network error, return a PropertiesResponse with the error.
                 properties = PropertiesResponse(properties: [], error: error)
-                isLoading = false
+                
             case .success(let properties):
                 // If the network request is successful, return a PropertiesResponse with the fetched properties.
                 guard let result = properties?.properties else {return}
                 let propertyList = Array(result)
                 self.properties = PropertiesResponse(properties: propertyList, error: nil)
-                isLoading = false
+               
             }
+            isLoading = false
         }
         
     }
@@ -72,17 +73,18 @@ class PropertiesViewModel: ObservableObject {
             switch result {
             case .failure(let error):
                 // If there is a network error, return a PropertyScreenResponse with the error.
-                isLoading = false
+                
                 property = PropertyScreenResponse(property: nil, error: error)
                 
             case .success(let property):
                 // If the network request is successful, return a PropertyScreenResponse with the fetched properties.
-                isLoading = false
+                
                 self.property =  PropertyScreenResponse(property: property, error: nil)
                 if let propertyimages = property?.images {
                     images = Array(propertyimages)
                 }
             }
+            isLoading = false
         }
  
      }

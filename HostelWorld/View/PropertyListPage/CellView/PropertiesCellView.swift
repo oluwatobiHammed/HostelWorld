@@ -82,7 +82,7 @@ struct PropertiesCellView: View {
     }
 }
 
-#Preview {
-    PropertiesCellView(property: CityProperty())
-}
+//#Preview {
+//    PropertiesCellView(property: CityProperty())
+//}
 

@@ -14,22 +14,25 @@ struct PropertyListScrollView: View {
     let properties: [CityProperty]
     var body: some View {
         ScrollView {
-            ForEach(properties, id: \.self) { property in
-                NavigationLink(value: property) {
-                    LazyVStack {
+            LazyVStack(spacing: 12) {
+                
+                ForEach(properties, id: \.self) { property in
+                    
+                    NavigationLink(value: property) {
+                        
                         PropertiesCellView(property: property)
-                            .redactShimmer(condition: viewModel.isLoading)
+                        
                             .clipShape(RoundedRectangle(cornerRadius: 25)) // Apply corner radius using clipShape
                             .frame(height: 350)
-                            .padding(.vertical, 5)
                             .padding(.horizontal, 9)
                             .navigationBarTitle(property.city?.country ?? "")
+                        
+                        
                     }
-                    
+                    .buttonStyle(PlainButtonStyle()) // Use PlainButtonStyle to remove the default navigation color
+                    .accentColor(nil) // Remove selection style
                 }
-                .buttonStyle(PlainButtonStyle()) // Use PlainButtonStyle to remove the default navigation color
-                .accentColor(nil) // Remove selection style
-                
+                .redactShimmer(condition: viewModel.isLoading)
             }
             
         }

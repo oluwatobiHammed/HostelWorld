@@ -97,6 +97,6 @@ struct HomePageTableView: View {
     }
 }
 
-#Preview {
-    HomePageTableView()
-}
+//#Preview {
+//    HomePageTableView()
+//}

@@ -15,7 +15,11 @@ struct VerticalImageView: View {
             ForEach(images.indices, id: \.self) { index in
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 0) {
-                        LoadImages(width: UIScreen.main.bounds.width - 70, height: 100,urlString: images[index].prefix+images[index].suffix)
+                        // Checked if the realm obj is not deleted before accessing it
+                        if !images.contains(where: {$0.isInvalidated}) {
+                            LoadImages(width: UIScreen.main.bounds.width - 70, height: 100,urlString: images[index].prefix+images[index].suffix)
+                        }
+                        
                         
                     }
                     
@@ -32,7 +36,7 @@ struct VerticalImageView: View {
     }
 }
 
-#Preview {
-    VerticalImageView(images: [PropertyImage]())
-}
+//#Preview {
+//    VerticalImageView(images: [PropertyImage]())
+//}
 

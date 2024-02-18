@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F592B804C6D00CCBCFD /* MyBackButton.swift */; };
 		31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */; };
 		31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5D2B80510800CCBCFD /* HomePageTableView.swift */; };
 		310798162B8101B00000CCDA /* Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310798152B8101B00000CCDA /* Shimmering.swift */; };
@@ -112,7 +111,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31002F592B804C6D00CCBCFD /* MyBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBackButton.swift; sourceTree = "<group>"; };
 		31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		31002F5D2B80510800CCBCFD /* HomePageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableView.swift; sourceTree = "<group>"; };
 		310798152B8101B00000CCDA /* Shimmering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmering.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
-				31002F592B804C6D00CCBCFD /* MyBackButton.swift */,
 				31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */,
 				319359932B80B3D800229DE5 /* TitleView.swift */,
 			);
@@ -808,7 +805,6 @@
 				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
 				3193599C2B80C64A00229DE5 /* PropertyListScrollView.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
-				31002F5A2B804C6D00CCBCFD /* MyBackButton.swift in Sources */,
 				310798182B8104C10000CCDA /* RedactedShimmer.swift in Sources */,
 				314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */,
 				31BE930A2B7E9FED003981E2 /* EndPointType.swift in Sources */,
