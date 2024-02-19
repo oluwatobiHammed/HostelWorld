@@ -68,7 +68,7 @@ struct HomePageTableView: View {
             }
                 
             .navigationBarItems(trailing:
-                                    Button(action: {
+                Button(action: {
                 // Reload the data
                 self.reload()
             }) {

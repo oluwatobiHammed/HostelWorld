@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */; };
 		31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5D2B80510800CCBCFD /* HomePageTableView.swift */; };
+		310BC5E22B836C2500DAA126 /* PropertyDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BC5E12B836C2500DAA126 /* PropertyDetailsTest.swift */; };
+		310BC5E62B83745400DAA126 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BC5E52B83745400DAA126 /* NetworkingManagerTests.swift */; };
+		310BC5E82B83925A00DAA126 /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BC5E72B83925A00DAA126 /* MockURLSessionProtocol.swift */; };
 		314C3EDE2B7FA3E6009748B8 /* PropertyDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EDD2B7FA3E6009748B8 /* PropertyDetailScreen.swift */; };
 		314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */; };
 		314C3EE42B7FE25E009748B8 /* LoadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE32B7FE25E009748B8 /* LoadImages.swift */; };
@@ -16,6 +19,8 @@
 		314C3EE92B800DD0009748B8 /* HWRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EE82B800DD0009748B8 /* HWRealmManager.swift */; };
 		314C3EEB2B801DC1009748B8 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */; };
 		314C3EED2B801EAE009748B8 /* PaymentMethodScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */; };
+		317814662B83A46900F64A5B /* NetworkingEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317814652B83A46900F64A5B /* NetworkingEndpointTests.swift */; };
+		317814692B83A96C00F64A5B /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317814682B83A96C00F64A5B /* JSONMapperTests.swift */; };
 		3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193598C2B80AE1200229DE5 /* IndexPage.swift */; };
 		319359942B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */; };
 		319359962B80C01200229DE5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319359952B80C01200229DE5 /* AddressView.swift */; };
@@ -91,8 +96,6 @@
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
 		31FE202A2B7E9A92000F167E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20292B7E9A92000F167E /* Preview Assets.xcassets */; };
 		31FE20342B7E9A92000F167E /* HostelWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20332B7E9A92000F167E /* HostelWorldTests.swift */; };
-		31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */; };
-		31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 /* Begin PBXFileReference section */
 		31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		31002F5D2B80510800CCBCFD /* HomePageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableView.swift; sourceTree = "<group>"; };
+		310BC5E12B836C2500DAA126 /* PropertyDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsTest.swift; sourceTree = "<group>"; };
+		310BC5E52B83745400DAA126 /* NetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTests.swift; sourceTree = "<group>"; };
+		310BC5E72B83925A00DAA126 /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
 		314C3EDD2B7FA3E6009748B8 /* PropertyDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailScreen.swift; sourceTree = "<group>"; };
 		314C3EE12B7FDFF1009748B8 /* View+OnLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnLoad.swift"; sourceTree = "<group>"; };
 		314C3EE32B7FE25E009748B8 /* LoadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImages.swift; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		314C3EE82B800DD0009748B8 /* HWRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWRealmManager.swift; sourceTree = "<group>"; };
 		314C3EEA2B801DC1009748B8 /* PaymentMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethods.swift; sourceTree = "<group>"; };
 		314C3EEC2B801EAE009748B8 /* PaymentMethodScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScrollView.swift; sourceTree = "<group>"; };
+		317814652B83A46900F64A5B /* NetworkingEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTests.swift; sourceTree = "<group>"; };
+		317814682B83A96C00F64A5B /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
 		3193598C2B80AE1200229DE5 /* IndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPage.swift; sourceTree = "<group>"; };
 		319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSubTitleReuseableView.swift; sourceTree = "<group>"; };
 		319359952B80C01200229DE5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -200,8 +208,6 @@
 		31FE202F2B7E9A92000F167E /* HostelWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostelWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FE20332B7E9A92000F167E /* HostelWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldTests.swift; sourceTree = "<group>"; };
 		31FE20392B7E9A92000F167E /* HostelWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostelWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldUITests.swift; sourceTree = "<group>"; };
-		31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,12 +248,46 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		310BC5E32B83742900DAA126 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				317814672B83A8F100F64A5B /* Mapper */,
+				317814642B83A45700F64A5B /* Endpoint */,
+				310BC5E42B83743A00DAA126 /* NetworkingManager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		310BC5E42B83743A00DAA126 /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+				310BC5E52B83745400DAA126 /* NetworkingManagerTests.swift */,
+			);
+			path = NetworkingManager;
+			sourceTree = "<group>";
+		};
 		314C3EE72B800D9C009748B8 /* DB Manager */ = {
 			isa = PBXGroup;
 			children = (
 				314C3EE82B800DD0009748B8 /* HWRealmManager.swift */,
 			);
 			path = "DB Manager";
+			sourceTree = "<group>";
+		};
+		317814642B83A45700F64A5B /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				317814652B83A46900F64A5B /* NetworkingEndpointTests.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		317814672B83A8F100F64A5B /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				317814682B83A96C00F64A5B /* JSONMapperTests.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		3193598E2B80B1EC00229DE5 /* IndexView */ = {
@@ -315,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				319359A32B80E10200229DE5 /* NetworkManagerMock.swift */,
+				310BC5E72B83925A00DAA126 /* MockURLSessionProtocol.swift */,
 			);
 			path = MockService;
 			sourceTree = "<group>";
@@ -323,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				319359A82B80E52900229DE5 /* PropertyListViewModelTest.swift */,
+				310BC5E12B836C2500DAA126 /* PropertyDetailsTest.swift */,
 			);
 			path = PropertyListTest;
 			sourceTree = "<group>";
@@ -545,7 +587,6 @@
 			children = (
 				31FE20212B7E9A8F000F167E /* HostelWorld */,
 				31FE20322B7E9A92000F167E /* HostelWorldTests */,
-				31FE203C2B7E9A92000F167E /* HostelWorldUITests */,
 				31FE20202B7E9A8F000F167E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -588,20 +629,12 @@
 		31FE20322B7E9A92000F167E /* HostelWorldTests */ = {
 			isa = PBXGroup;
 			children = (
+				310BC5E32B83742900DAA126 /* Networking */,
 				319359A72B80E50000229DE5 /* PropertyListTest */,
 				319359A22B80E0C800229DE5 /* MockService */,
 				31FE20332B7E9A92000F167E /* HostelWorldTests.swift */,
 			);
 			path = HostelWorldTests;
-			sourceTree = "<group>";
-		};
-		31FE203C2B7E9A92000F167E /* HostelWorldUITests */ = {
-			isa = PBXGroup;
-			children = (
-				31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */,
-				31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */,
-			);
-			path = HostelWorldUITests;
 			sourceTree = "<group>";
 		};
 		31FE204C2B7E9B43000F167E /* Constants */ = {
@@ -835,9 +868,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310BC5E62B83745400DAA126 /* NetworkingManagerTests.swift in Sources */,
 				319359A42B80E10200229DE5 /* NetworkManagerMock.swift in Sources */,
+				317814692B83A96C00F64A5B /* JSONMapperTests.swift in Sources */,
+				310BC5E82B83925A00DAA126 /* MockURLSessionProtocol.swift in Sources */,
+				317814662B83A46900F64A5B /* NetworkingEndpointTests.swift in Sources */,
 				31FE20342B7E9A92000F167E /* HostelWorldTests.swift in Sources */,
 				319359A92B80E52900229DE5 /* PropertyListViewModelTest.swift in Sources */,
+				310BC5E22B836C2500DAA126 /* PropertyDetailsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,8 +883,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */,
-				31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

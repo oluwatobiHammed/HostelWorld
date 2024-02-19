@@ -52,6 +52,7 @@ class PropertiesViewModel: ObservableObject {
                 let propertyList = Array(properties.properties)
                 self.properties = PropertiesResponse(properties: propertyList, error: nil)
                 
+                // I put this here to give a feel of loading
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {[weak self] in
                     self?.isLoading = false
                 })
@@ -84,6 +85,7 @@ class PropertiesViewModel: ObservableObject {
                 // If the network request is successful, return a PropertyScreenResponse with the fetched properties.
                 
                 self.property =  PropertyScreenResponse(property: property, error: nil)
+                // I put this here to give a feel of loading
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: { [weak self] in
                     self?.isLoading = false
                 })
