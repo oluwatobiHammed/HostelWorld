@@ -56,6 +56,7 @@ class PropertyListViewModelTest: XCTestCase {
     func testgetCityPropertiesFailed() async  {
         
         // Fetch city properties and assert the expected results
+        viewModel.reload()
         await viewModel.getProperties()
         XCTAssertNotNil(viewModel.properties?.error)
         XCTAssertTrue((viewModel.properties?.properties.isEmpty ?? false))

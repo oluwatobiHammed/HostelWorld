@@ -118,7 +118,6 @@ class PropertiesViewModel: ObservableObject {
             guard let self else {return}
              await getProperties()
             showAlert = properties?.error != nil
-            //errorMessage = properties?.error?.localizedDescription ?? ""
         }
     }
     
