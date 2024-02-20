@@ -33,10 +33,7 @@ import SwiftUI
 struct HomePageTableView: View {
     
     @StateObject private var viewModel =  PropertiesViewModel()
-    @State private var isRefreshing: Bool = false
-    @State private var showAlert: Bool = false
-    @State private var showErrorMessage: Bool = false
-    @State private var errorMessage: String = ""
+
     
     var body: some View {
         
@@ -49,41 +46,43 @@ struct HomePageTableView: View {
                         PropertyDetailScreen(id: property.id)
                     }
                     .redacted(reason: viewModel.isLoading ? .placeholder : [])
-                    .alert("Something happened", isPresented: $showAlert) {
+                    .alert("Something happened", isPresented: $viewModel.showAlert) {
                         Button("Retry") {
                             // Handle OK button action
-                            showAlert = false
-                            viewModel.memoryCleanUp()
-                            loadPropertyList()
+                            viewModel.showAlert = false
+                            viewModel.reload()
+//                            viewModel.memoryCleanUp()
+//                            viewModel.loadPropertyList()
                         }
                         
                         Button("ok") {
                             // Handle OK button action
-                            showAlert = false
+                            viewModel.showAlert = false
                             
                         }
                     }
             message: {
-                Text(errorMessage)
+                Text(viewModel.errorMessage)
             }
                 
             .navigationBarItems(trailing:
                 Button(action: {
                 // Reload the data
-                self.reload()
+                viewModel.reload()
             }) {
                 Image(systemName: "arrow.clockwise.circle")
                     .imageScale(.large)
             }
             )
-            .pullToRefresh(isRefreshing: $isRefreshing) {
-                self.reload()
+            .pullToRefresh(isRefreshing: $viewModel.isRefreshing) {
+                viewModel.reload()
             }
             .padding()
             .padding(.top, -15)
             .onLoad {
-                viewModel.memoryCleanUp()
-                loadPropertyList()
+//                viewModel.memoryCleanUp()
+//                viewModel.loadPropertyList()
+                viewModel.reload()
                 
             }
            
@@ -95,7 +94,7 @@ struct HomePageTableView: View {
             }
 
             
-            if (viewModel.properties?.properties.isEmpty ?? false), errorMessage.isEmpty {
+            if (viewModel.properties?.properties.isEmpty ?? false), viewModel.errorMessage.isEmpty {
                 Spacer()
                 HStack {
                     let errorMessage = """
@@ -113,21 +112,7 @@ struct HomePageTableView: View {
         
     }
     
-    private func loadPropertyList() {
-        Task {
-             await viewModel.getProperties()
-            showAlert = viewModel.properties?.error != nil
-            errorMessage = viewModel.properties?.error?.localizedDescription ?? ""
-        }
-    }
-    
-    func reload() {
-        
-        viewModel.memoryCleanUp()
-        loadPropertyList()
-        // Set isRefreshing to false after data is reloaded
-        self.isRefreshing = false
-    }
+
 }
 
 //#Preview {

@@ -11,14 +11,14 @@ import Foundation
 class PropertiesViewModel: ObservableObject {
     
     // Published property to trigger updates when the properties data changes.
-    @Published var properties: PropertiesResponse?
+    @Published private (set) var properties: PropertiesResponse?
     
     // Published property to trigger updates when the properties data changes.
-    @Published var property: PropertyScreenResponse?
+    @Published private (set) var property: PropertyScreenResponse?
     
-    @Published var isLoading: Bool = false
+    @Published private (set) var isLoading: Bool = false
     
-    @Published var images: [PropertyImage] = []
+    @Published private (set) var images: [PropertyImage] = []
     
     @Published private (set) var isViewVisible = false
     
@@ -29,6 +29,11 @@ class PropertiesViewModel: ObservableObject {
     @Published private (set) var errorMessage: String = ""
     
     @Published private (set) var notAvailableMessage: String = ""
+    
+    @Published var isRefreshing: Bool = false
+    
+    @Published private (set) var showErrorMessage: Bool = false
+    
     
     // Instance of a NetworkManager conforming to NetworkManagerProtocol.
     private let network: NetworkManagerProtocol
@@ -109,9 +114,27 @@ class PropertiesViewModel: ObservableObject {
  
      }
     
+    private func loadPropertyList() {
+        Task {[weak self] in
+            guard let self else {return}
+             await getProperties()
+            showAlert = properties?.error != nil
+            errorMessage = properties?.error?.localizedDescription ?? ""
+        }
+    }
+    
+     func reload() {
+        
+        memoryCleanUp()
+        loadPropertyList()
+        // Set isRefreshing to false after data is reloaded
+        self.isRefreshing = false
+    }
+    
     // Fetch property details using async/await
     func getProperty(id: String) {
-        Task {
+        Task {[weak self] in
+            guard let self else {return}
             await getProperty(id: id)
             
             // Update payment options based on property details
