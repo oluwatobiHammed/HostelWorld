@@ -20,6 +20,16 @@ class PropertiesViewModel: ObservableObject {
     
     @Published var images: [PropertyImage] = []
     
+    @Published private (set) var isViewVisible = false
+    
+    @Published private (set) var paymentOption: [String] = []
+    
+    @Published var showAlert: Bool = false
+    
+    @Published private (set) var errorMessage: String = ""
+    
+    @Published private (set) var notAvailableMessage: String = ""
+    
     // Instance of a NetworkManager conforming to NetworkManagerProtocol.
     private let network: NetworkManagerProtocol
     
@@ -63,7 +73,7 @@ class PropertiesViewModel: ObservableObject {
     }
     
     // Asynchronously fetch city properties and update the properties variable.
-    func getProperty(id: String) async  {
+   private func getProperty(id: String) async  {
         isLoading = true
         if let property = HWRealmManager.shared.fetchProperty(forID: id), !property.isInvalidated {
             isLoading = false
@@ -99,6 +109,28 @@ class PropertiesViewModel: ObservableObject {
  
      }
     
+    // Fetch property details using async/await
+    func getProperty(id: String) {
+        Task {
+            await getProperty(id: id)
+            
+            // Update payment options based on property details
+            if let paymentOption = property?.property?.paymentMethods {
+                self.paymentOption = Array(paymentOption)
+            }
+            
+            // Update visibility and display status based on API response
+            isViewVisible = properties?.error == nil
+            showAlert = properties?.error != nil || property?.property == nil
+            errorMessage = property?.error?.localizedDescription ?? ""
+            notAvailableMessage = """
+                                     Oops!!
+                                     Property details is Not available !
+                                     """
+        }
+    }
+    
+    // Cache clean up
     func memoryCleanUp() {
         HWRealmManager.shared.clearObject(type: CityProperties.self)
         HWRealmManager.shared.clearObject(type: SingleProperty.self)

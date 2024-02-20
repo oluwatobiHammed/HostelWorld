@@ -37,14 +37,7 @@ struct PropertyDetailScreen: View {
     
     // ViewModel to manage property details
     @StateObject private var viewModel =  PropertiesViewModel()
-    
-    // State variables to manage UI elements and display status
-    @State private var images: [PropertyImage] = []
-    @State private var paymentOption: [String] = []
-    @State private var showAlert: Bool = false
-    @State private var errorMessage: String = ""
-    @State private var notAvailableMessage: String = ""
-    @State private var isViewVisible = false
+
     
     var body: some View {
         
@@ -81,7 +74,7 @@ struct PropertyDetailScreen: View {
                         AddressView(address: "\(address1), \(name),  \(country)")
                     }
                     
-                    if !paymentOption.isEmpty {
+                    if !viewModel.paymentOption.isEmpty {
                         Divider()
                             .frame(height: 0.3)
                             .background(Color.primary)
@@ -92,7 +85,7 @@ struct PropertyDetailScreen: View {
                         
                         TitleAndSubTitleReuseableView(title: "Payment Method")
                             .padding(.top, 5)
-                        PaymentMethodScrollView(paymentMethod: paymentOption)
+                        PaymentMethodScrollView(paymentMethod: viewModel.paymentOption)
                             .padding(.top, -15)
                     }
                     
@@ -100,28 +93,28 @@ struct PropertyDetailScreen: View {
                 }
             }
             .scrollIndicators(.hidden)
-            .alert("Something happened", isPresented: $showAlert) {
+            .alert("Something happened", isPresented: $viewModel.showAlert) {
                 Button("ok") {
                     // Handle OK button action
-                    showAlert = false
+                    viewModel.showAlert = false
                     
                 }
             }
         message: {
-            Text(errorMessage)
+            Text(viewModel.errorMessage)
         }
         .onLoad {
-            getProperty()
+            viewModel.getProperty(id: id)
         }
             
         .navigationTitle(viewModel.property?.property?.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
             
             // Display a message if the view is not visible and not loading
-            if !isViewVisible, !viewModel.isLoading {
+            if !viewModel.isViewVisible, !viewModel.isLoading {
                 Spacer()
                 HStack {
-                    Text(notAvailableMessage)
+                    Text(viewModel.notAvailableMessage)
                         .multilineTextAlignment(.center) // You can adjust the alignment as needed
                         .padding()
                 }
@@ -133,26 +126,7 @@ struct PropertyDetailScreen: View {
         
     }
     
-    // Fetch property details using async/await
-    private func getProperty() {
-        Task {
-            await viewModel.getProperty(id: id)
-            
-            // Update payment options based on property details
-            if let paymentOption = viewModel.property?.property?.paymentMethods {
-                self.paymentOption = Array(paymentOption)
-            }
-            
-            // Update visibility and display status based on API response
-            isViewVisible = viewModel.properties?.error == nil
-            showAlert = viewModel.properties?.error != nil || viewModel.property?.property == nil
-            errorMessage = viewModel.property?.error?.localizedDescription ?? ""
-            notAvailableMessage = """
-                                     Oops!!
-                                     Property details is Not available !
-                                     """
-        }
-    }
+
 }
 
 //#Preview {
