@@ -51,8 +51,7 @@ struct HomePageTableView: View {
                             // Handle OK button action
                             viewModel.showAlert = false
                             viewModel.reload()
-//                            viewModel.memoryCleanUp()
-//                            viewModel.loadPropertyList()
+
                         }
                         
                         Button("ok") {
@@ -62,7 +61,7 @@ struct HomePageTableView: View {
                         }
                     }
             message: {
-                Text(viewModel.errorMessage)
+                Text(viewModel.properties?.error?.localizedDescription ?? "")
             }
                 
             .navigationBarItems(trailing:
@@ -80,8 +79,6 @@ struct HomePageTableView: View {
             .padding()
             .padding(.top, -15)
             .onLoad {
-//                viewModel.memoryCleanUp()
-//                viewModel.loadPropertyList()
                 viewModel.reload()
                 
             }
@@ -94,7 +91,7 @@ struct HomePageTableView: View {
             }
 
             
-            if (viewModel.properties?.properties.isEmpty ?? false), viewModel.errorMessage.isEmpty {
+            if (viewModel.properties?.properties.isEmpty ?? false), (viewModel.properties?.error?.localizedDescription.isEmpty ?? false) {
                 Spacer()
                 HStack {
                     let errorMessage = """
@@ -115,6 +112,6 @@ struct HomePageTableView: View {
 
 }
 
-//#Preview {
-//    HomePageTableView()
-//}
+#Preview {
+    HomePageTableView()
+}

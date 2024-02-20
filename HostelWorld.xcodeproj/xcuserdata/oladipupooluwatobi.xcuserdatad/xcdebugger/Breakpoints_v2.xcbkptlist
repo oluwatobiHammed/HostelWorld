@@ -7,62 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D52B8474-4804-4DE0-86AA-555D0DB50B66"
-            shouldBeEnabled = "No"
+            uuid = "C8E63B26-68B5-43BF-AD4B-236D5CDFAF6F"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HostelWorld/Network Manager/ViewModel/PropertiesViewModel.swift"
+            filePath = "HostelWorld/ViewModel/PropertiesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getProperties()"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getProperty(id:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D52B8474-4804-4DE0-86AA-555D0DB50B66 - c27e4ea7f8403199"
+                  uuid = "C8E63B26-68B5-43BF-AD4B-236D5CDFAF6F - 309fa6c50abae4a4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in HostelWorld.PropertiesViewModel.getProperties() -&gt; ()"
+                  symbolName = "(3) suspend resume partial function for HostelWorld.PropertiesViewModel.getProperty(id: Swift.String) async -&gt; ()"
                   moduleName = "HostelWorld"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/Network%20Manager/ViewModel/PropertiesViewModel.swift"
+                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/ViewModel/PropertiesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "455">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "541">
                </Location>
                <Location
-                  uuid = "D52B8474-4804-4DE0-86AA-555D0DB50B66 - c27e4ea7f84031b8"
+                  uuid = "C8E63B26-68B5-43BF-AD4B-236D5CDFAF6F - 309fa6c50abae4e2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in HostelWorld.PropertiesViewModel.getProperties() -&gt; ()"
+                  symbolName = "(3) suspend resume partial function for HostelWorld.PropertiesViewModel.getProperty(id: Swift.String) async -&gt; ()"
                   moduleName = "HostelWorld"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/Network%20Manager/ViewModel/PropertiesViewModel.swift"
+                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/ViewModel/PropertiesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "746">
-               </Location>
-               <Location
-                  uuid = "D52B8474-4804-4DE0-86AA-555D0DB50B66 - c27e4ea7f84031b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in HostelWorld.PropertiesViewModel.getProperties() -&gt; ()"
-                  moduleName = "HostelWorld"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/Network%20Manager/ViewModel/PropertiesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "530">
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "301">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -70,128 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E171C12A-0AB8-4263-9E79-81FA6209C593"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HostelWorld/View/PropertyDetails/PropertyDetailScreen.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "E171C12A-0AB8-4263-9E79-81FA6209C593 - 19bee861282a7e9d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt;)&gt; in HostelWorld.PropertyDetailScreen.body.getter : some"
-                  moduleName = "HostelWorld"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/View/PropertyDetails/PropertyDetailScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "1284">
-               </Location>
-               <Location
-                  uuid = "E171C12A-0AB8-4263-9E79-81FA6209C593 - 2f074187d130954e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, HostelWorld.OverallRatingView, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;HostelWorld.PropertyDetailsDirectionsView&gt;, Swift.Optional&lt;HostelWorld.PropertyDetailsDescriptionView&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, HostelWorld.AddressView, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Spacer)&gt;&gt;)&gt; in HostelWorld.PropertyDetailScreen.body.getter : some"
-                  moduleName = "HostelWorld"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oladipupooluwatobi/Desktop/HostelWorld/HostelWorld/View/PropertyDetails/PropertyDetailScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "532">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDE88337-052F-4E22-9124-60EEC3781E44"
+            uuid = "B981480C-0124-47E9-BE9B-B5FE6092EF0B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HostelWorldTests/MockService/MockURLSessionProtocol.swift"
+            filePath = "HostelWorld/ViewModel/PropertiesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "startLoading()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ED4F0151-A4E2-4920-A482-0897D323743E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HostelWorldTests/MockService/MockURLSessionProtocol.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "startLoading()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "80F89976-32EE-4D6D-9B0B-7D223098EAD5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HostelWorldTests/MockService/MockURLSessionProtocol.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "canInit(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4077836-7BD3-4071-B921-7C8433E38EF1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HostelWorldTests/MockService/MockURLSessionProtocol.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "canonicalRequest(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "01FFC00E-A1E8-4C9C-851C-D1C060DFF4C1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HostelWorldTests/MockService/MockURLSessionProtocol.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "startLoading()"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "loadProperty(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

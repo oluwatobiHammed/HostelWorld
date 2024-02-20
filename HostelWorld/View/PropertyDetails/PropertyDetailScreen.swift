@@ -101,10 +101,13 @@ struct PropertyDetailScreen: View {
                 }
             }
         message: {
-            Text(viewModel.errorMessage)
+            Text(viewModel.property?.error?.localizedDescription ?? "")
         }
         .onLoad {
-            viewModel.getProperty(id: id)
+            Task {
+                await viewModel.loadProperty(id: id)
+            }
+            
         }
             
         .navigationTitle(viewModel.property?.property?.name ?? "")

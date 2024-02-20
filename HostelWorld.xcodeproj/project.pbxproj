@@ -96,6 +96,8 @@
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
 		31FE202A2B7E9A92000F167E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20292B7E9A92000F167E /* Preview Assets.xcassets */; };
 		31FE20342B7E9A92000F167E /* HostelWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20332B7E9A92000F167E /* HostelWorldTests.swift */; };
+        31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */; };
+        31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +210,8 @@
 		31FE202F2B7E9A92000F167E /* HostelWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostelWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FE20332B7E9A92000F167E /* HostelWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldTests.swift; sourceTree = "<group>"; };
 		31FE20392B7E9A92000F167E /* HostelWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HostelWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldUITests.swift; sourceTree = "<group>"; };
+		31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostelWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +591,7 @@
 			children = (
 				31FE20212B7E9A8F000F167E /* HostelWorld */,
 				31FE20322B7E9A92000F167E /* HostelWorldTests */,
+				31FE203C2B7E9A92000F167E /* HostelWorldUITests */,
 				31FE20202B7E9A8F000F167E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -635,6 +640,15 @@
 				31FE20332B7E9A92000F167E /* HostelWorldTests.swift */,
 			);
 			path = HostelWorldTests;
+			sourceTree = "<group>";
+		};
+		31FE203C2B7E9A92000F167E /* HostelWorldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */,
+				31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */,
+			);
+			path = HostelWorldUITests;
 			sourceTree = "<group>";
 		};
 		31FE204C2B7E9B43000F167E /* Constants */ = {
@@ -883,6 +897,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */,
+				31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

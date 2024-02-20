@@ -26,8 +26,6 @@ class PropertiesViewModel: ObservableObject {
     
     @Published var showAlert: Bool = false
     
-    @Published private (set) var errorMessage: String = ""
-    
     @Published private (set) var notAvailableMessage: String = ""
     
     @Published var isRefreshing: Bool = false
@@ -100,6 +98,7 @@ class PropertiesViewModel: ObservableObject {
                 // If the network request is successful, return a PropertyScreenResponse with the fetched properties.
                 
                 self.property =  PropertyScreenResponse(property: property, error: nil)
+                
                 // I put this here to give a feel of loading
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: { [weak self] in
                     self?.isLoading = false
@@ -119,7 +118,7 @@ class PropertiesViewModel: ObservableObject {
             guard let self else {return}
              await getProperties()
             showAlert = properties?.error != nil
-            errorMessage = properties?.error?.localizedDescription ?? ""
+            //errorMessage = properties?.error?.localizedDescription ?? ""
         }
     }
     
@@ -132,9 +131,8 @@ class PropertiesViewModel: ObservableObject {
     }
     
     // Fetch property details using async/await
-    func getProperty(id: String) {
-        Task {[weak self] in
-            guard let self else {return}
+    func loadProperty(id: String) async {
+        
             await getProperty(id: id)
             
             // Update payment options based on property details
@@ -145,12 +143,11 @@ class PropertiesViewModel: ObservableObject {
             // Update visibility and display status based on API response
             isViewVisible = properties?.error == nil
             showAlert = properties?.error != nil || property?.property == nil
-            errorMessage = property?.error?.localizedDescription ?? ""
+            //errorMessage = property?.error?.localizedDescription ?? ""
             notAvailableMessage = """
                                      Oops!!
                                      Property details is Not available !
                                      """
-        }
     }
     
     // Cache clean up
