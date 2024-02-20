@@ -129,7 +129,7 @@ struct PropertyDetailScreen: View {
 
 }
 
-//#Preview {
-//    PropertyDetailScreen(id: "")
-//}
+#Preview {
+    PropertyDetailScreen(id: "")
+}
 
