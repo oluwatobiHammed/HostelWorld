@@ -26,23 +26,24 @@ import SwiftUI
 
 struct PropertyListScrollView: View {
     
-    @StateObject private var viewModel =  PropertiesViewModel()
+    @StateObject private var viewModel = PropertiesViewModel()
     let isLoading: Bool
     let properties: [CityProperty]
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 12) {
                 
-                ForEach(properties, id: \.self) { property in
+                ForEach(properties.indices, id: \.self) { index in
                     
-                    NavigationLink(value: property) {
+                    NavigationLink(value: properties[index]) {
                         
-                        PropertiesCellView(property: property)
+                        PropertiesCellView(property: properties[index])
                         
                             .clipShape(RoundedRectangle(cornerRadius: 25)) // Apply corner radius using clipShape
                             .frame(height: 350)
                             .padding(.horizontal, 9)
-                            .navigationBarTitle(property.city?.country ?? "")
+                            .padding(.top, index == 0 ? 10 : 0)
+                            .navigationBarTitle(properties[index].city?.country ?? "")
                         
                         
                     }
@@ -53,6 +54,10 @@ struct PropertyListScrollView: View {
                 .redacted(reason: isLoading ? .placeholder : [])
             }
             
+        }
+        .refreshable {
+            //  pull to Reload the data
+            viewModel.reload()
         }
  
     }

@@ -63,21 +63,8 @@ struct HomePageTableView: View {
             message: {
                 Text(viewModel.properties?.error?.localizedDescription ?? "")
             }
-                
-            .navigationBarItems(trailing:
-                Button(action: {
-                // Reload the data
-                viewModel.reload()
-            }) {
-                Image(systemName: "arrow.clockwise.circle")
-                    .imageScale(.large)
-            }
-            )
-            .pullToRefresh(isRefreshing: $viewModel.isRefreshing) {
-                viewModel.reload()
-            }
             .padding()
-            .padding(.top, -15)
+            .padding(.top, -16)
             .onLoad {
                 viewModel.reload()
                 
@@ -112,6 +99,6 @@ struct HomePageTableView: View {
 
 }
 
-#Preview {
-    HomePageTableView()
-}
+//#Preview {
+//    HomePageTableView()
+//}

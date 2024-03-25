@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */; };
 		31002F5E2B80510800CCBCFD /* HomePageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002F5D2B80510800CCBCFD /* HomePageTableView.swift */; };
 		310BC5E22B836C2500DAA126 /* PropertyDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BC5E12B836C2500DAA126 /* PropertyDetailsTest.swift */; };
 		310BC5E62B83745400DAA126 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BC5E52B83745400DAA126 /* NetworkingManagerTests.swift */; };
@@ -96,8 +95,8 @@
 		31FE20272B7E9A92000F167E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20262B7E9A92000F167E /* Assets.xcassets */; };
 		31FE202A2B7E9A92000F167E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FE20292B7E9A92000F167E /* Preview Assets.xcassets */; };
 		31FE20342B7E9A92000F167E /* HostelWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE20332B7E9A92000F167E /* HostelWorldTests.swift */; };
-        31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */; };
-        31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */; };
+		31FE203E2B7E9A92000F167E /* HostelWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203D2B7E9A92000F167E /* HostelWorldUITests.swift */; };
+		31FE20402B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE203F2B7E9A92000F167E /* HostelWorldUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +117,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		31002F5D2B80510800CCBCFD /* HomePageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableView.swift; sourceTree = "<group>"; };
 		310BC5E12B836C2500DAA126 /* PropertyDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailsTest.swift; sourceTree = "<group>"; };
 		310BC5E52B83745400DAA126 /* NetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTests.swift; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				314C3EE32B7FE25E009748B8 /* LoadImages.swift */,
-				31002F5B2B804EC300CCBCFD /* PullToRefresh.swift */,
 				319359932B80B3D800229DE5 /* TitleAndSubTitleReuseableView.swift */,
 				31EB41E12B82352500EE765D /* PartialRoundedCorners.swift */,
 			);
@@ -855,7 +852,6 @@
 				3193598D2B80AE1200229DE5 /* IndexPage.swift in Sources */,
 				31BE932D2B7EAC6F003981E2 /* PropertyImage.swift in Sources */,
 				319359982B80C0B100229DE5 /* DescriptionView.swift in Sources */,
-				31002F5C2B804EC300CCBCFD /* PullToRefresh.swift in Sources */,
 				3193599C2B80C64A00229DE5 /* PropertyListScrollView.swift in Sources */,
 				31BE93042B7E9CD3003981E2 /* APIConstants.swift in Sources */,
 				314C3EE22B7FDFF1009748B8 /* View+OnLoad.swift in Sources */,
